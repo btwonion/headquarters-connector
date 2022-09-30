@@ -1,4 +1,4 @@
-package dev.nyon.headquarter.connector.api
+package dev.nyon.headquarters.connector.api
 
 import io.ktor.client.*
 import io.ktor.client.request.*
