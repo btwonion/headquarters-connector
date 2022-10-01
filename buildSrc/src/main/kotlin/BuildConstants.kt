@@ -1,6 +1,5 @@
 object BuildConstants {
     const val version = "1.0.0"
-    val projectName = "headquarter-connector"
     val authors = listOf("btwonion")
     const val githubRepo = "btwonion/headquarter-connector"
     val isSnapshot = false
@@ -9,5 +8,6 @@ object BuildConstants {
     const val kotlinVersion = "1.7.10"
     const val serializationVersion = "1.4.0"
     const val coroutinesVersion = "1.6.4"
-    const val ktorVersion = "2.1.1"
+    const val ktorVersion = "2.1.2"
+    const val dateTimeVersion = "0.4.0"
 }

@@ -12,6 +12,7 @@ repositories {
 dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:${BuildConstants.serializationVersion}")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:${BuildConstants.coroutinesVersion}")
+    implementation("org.jetbrains.kotlinx:kotlinx-datetime:${BuildConstants.dateTimeVersion}")
 
     val ktorVersion = BuildConstants.ktorVersion
     implementation("io.ktor:ktor-client-core:$ktorVersion")
