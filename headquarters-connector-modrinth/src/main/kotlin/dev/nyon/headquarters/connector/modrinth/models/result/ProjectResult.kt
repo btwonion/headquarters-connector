@@ -1,8 +1,8 @@
 package dev.nyon.headquarters.connector.modrinth.models.result
 
-import dev.nyon.headquarters.connector.modrinth.models.slug.ClientSide
-import dev.nyon.headquarters.connector.modrinth.models.slug.ProjectType
-import dev.nyon.headquarters.connector.modrinth.models.slug.ServerSide
+import dev.nyon.headquarters.connector.modrinth.models.project.ClientSide
+import dev.nyon.headquarters.connector.modrinth.models.project.ProjectType
+import dev.nyon.headquarters.connector.modrinth.models.project.ServerSide
 import kotlinx.datetime.Instant
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

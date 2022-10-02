@@ -1,4 +1,4 @@
-package dev.nyon.headquarters.connector.modrinth.models.slug
+package dev.nyon.headquarters.connector.modrinth.models.project
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

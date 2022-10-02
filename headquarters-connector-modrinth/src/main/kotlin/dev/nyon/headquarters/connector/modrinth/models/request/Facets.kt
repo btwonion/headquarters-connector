@@ -1,7 +1,7 @@
 package dev.nyon.headquarters.connector.modrinth.models.request
 
 import kotlinx.serialization.SerialName
-import dev.nyon.headquarters.connector.modrinth.models.slug.ProjectType as RealProjectType
+import dev.nyon.headquarters.connector.modrinth.models.project.ProjectType as RealProjectType
 
 sealed class Facet<T>(open val keyWord: String, open val value: T) {
     abstract fun toJsonObject(): String
@@ -10,16 +10,18 @@ sealed class Facet<T>(open val keyWord: String, open val value: T) {
             this.value.joinToString(separator = "\",\"$keyWord:", prefix = "[\"$keyWord:", postfix = "\"]")
     }
 
-    data class Version(override val value: List<String>) : Facet<List<String>>("versions", value){
+    data class Version(override val value: List<String>) : Facet<List<String>>("versions", value) {
         override fun toJsonObject(): String =
             this.value.joinToString(separator = "\",\"$keyWord:", prefix = "[\"$keyWord:", postfix = "\"]")
     }
-    data class License(override val value: List<String>) : Facet<List<String>>("license", value){
+
+    data class License(override val value: List<String>) : Facet<List<String>>("license", value) {
         override fun toJsonObject(): String =
             this.value.joinToString(separator = "\",\"$keyWord:", prefix = "[\"$keyWord:", postfix = "\"]")
     }
+
     data class ProjectType(override val value: List<RealProjectType>) :
-        Facet<List<RealProjectType>>("project_type", value){
+        Facet<List<RealProjectType>>("project_type", value) {
         override fun toJsonObject(): String =
             this.value.joinToString(separator = "\",\"$keyWord:", prefix = "[\"$keyWord:", postfix = "\"]") {
                 it.getEnumFieldAnnotation<SerialName>()!!.value
