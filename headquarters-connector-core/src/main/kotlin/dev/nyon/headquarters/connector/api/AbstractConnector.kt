@@ -8,11 +8,11 @@ import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 
 abstract class AbstractConnector {
-    protected abstract val baseUrl: String
-    protected abstract val client: HttpClient
-    protected abstract val json: Json
+    abstract val baseUrl: String
+    abstract val client: HttpClient
+    abstract val json: Json
 
-    protected suspend inline fun <reified T> request(
+    suspend inline fun <reified T> request(
         url: String, crossinline builder: HttpRequestBuilder.() -> Unit = {}
     ): T? {
         val statement = client.prepareRequest("$baseUrl$url") {
