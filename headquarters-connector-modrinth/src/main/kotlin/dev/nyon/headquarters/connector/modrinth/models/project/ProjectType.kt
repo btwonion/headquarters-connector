@@ -12,8 +12,5 @@ enum class ProjectType {
     ModPack,
 
     @SerialName("resourcepack")
-    ResourcePack,
-
-    @SerialName("plugin")
-    Plugin
+    ResourcePack
 }
