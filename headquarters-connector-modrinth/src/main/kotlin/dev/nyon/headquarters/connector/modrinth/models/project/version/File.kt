@@ -1,6 +1,5 @@
 package dev.nyon.headquarters.connector.modrinth.models.project.version
 
-import dev.nyon.headquarters.connector.modrinth.models.project.Hashes
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 

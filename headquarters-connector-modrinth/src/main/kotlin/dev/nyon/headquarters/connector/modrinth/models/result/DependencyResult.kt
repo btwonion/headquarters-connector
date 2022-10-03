@@ -1,7 +1,7 @@
 package dev.nyon.headquarters.connector.modrinth.models.result
 
 import dev.nyon.headquarters.connector.modrinth.models.project.Project
-import dev.nyon.headquarters.connector.modrinth.models.project.Version
+import dev.nyon.headquarters.connector.modrinth.models.project.version.Version
 import kotlinx.serialization.Serializable
 
 @Serializable

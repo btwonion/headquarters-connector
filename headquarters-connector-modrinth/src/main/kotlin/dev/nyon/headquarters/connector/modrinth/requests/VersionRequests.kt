@@ -1,8 +1,8 @@
 package dev.nyon.headquarters.connector.modrinth.requests
 
 import dev.nyon.headquarters.connector.modrinth.ModrinthConnector
-import dev.nyon.headquarters.connector.modrinth.models.project.HashAlgorithm
-import dev.nyon.headquarters.connector.modrinth.models.project.Version
+import dev.nyon.headquarters.connector.modrinth.models.project.version.HashAlgorithm
+import dev.nyon.headquarters.connector.modrinth.models.project.version.Version
 import io.ktor.client.request.*
 
 suspend fun ModrinthConnector.listVersions(
