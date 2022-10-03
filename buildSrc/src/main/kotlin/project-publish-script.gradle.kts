@@ -10,11 +10,15 @@ githubRelease {
     token(findProperty("github.token")?.toString())
 
     val split = BuildConstants.githubRepo.split("/")
+    overwrite(true)
     owner(split[0])
     repo(split[1])
-    tagName("v${project.version}")
+    releaseName("v${BuildConstants.version}")
+    targetCommitish("master")
+    tagName("v${BuildConstants.version}")
     prerelease(BuildConstants.isSnapshot)
     releaseAssets(tasks["build"].outputs.files)
+    body("inital release")
 }
 
 java {
