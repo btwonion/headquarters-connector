@@ -19,6 +19,9 @@ class ModrinthConnector(
     override val json: Json,
     override val baseUrl: String = "https://api.modrinth.com/v2"
 ) : AbstractConnector() {
+
+
+    // Projects
     suspend fun searchProjects(
         query: String,
         facets: List<Facet<*>>? = null,
@@ -35,7 +38,6 @@ class ModrinthConnector(
         parameter("filters", filters)
     }
 
-    // Projects
     suspend fun getProject(query: String) = request<Project>("/project/$query")
     suspend fun getProjects(ids: List<String>) =
         request<List<Project>>("/projects") { parameter("ids", ids.joinQuotedStrings()) }
