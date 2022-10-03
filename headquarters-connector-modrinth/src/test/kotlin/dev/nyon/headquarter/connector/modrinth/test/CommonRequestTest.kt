@@ -8,6 +8,7 @@ import io.ktor.client.plugins.contentnegotiation.*
 import io.ktor.serialization.kotlinx.json.*
 import kotlinx.serialization.json.Json
 
+@Suppress("UNCHECKED_CAST")
 abstract class CommonRequestTest(block: CommonRequestTest.() -> Unit) : FunSpec(block as FunSpec.() -> Unit) {
     private val ktorClientJson = Json {
         ignoreUnknownKeys = true
