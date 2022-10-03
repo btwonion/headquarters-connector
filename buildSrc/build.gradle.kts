@@ -18,5 +18,5 @@ dependencies {
     compileOnly(pluginDep("org.jetbrains.kotlin.plugin.serialization", embeddedKotlinVersion))
     runtimeOnly(pluginDep("org.jetbrains.kotlin.plugin.serialization", kotlinVersion))
 
-    implementation(pluginDep("com.github.breadmoirai.github-release", "2.+"))
+    implementation(pluginDep("com.github.breadmoirai.github-release", "2.4.1"))
 }
