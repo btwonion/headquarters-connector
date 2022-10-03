@@ -2,13 +2,18 @@ package dev.nyon.headquarters.connector.modrinth.requests
 
 import dev.nyon.headquarters.connector.modrinth.ModrinthConnector
 import dev.nyon.headquarters.connector.modrinth.models.project.version.HashAlgorithm
+import dev.nyon.headquarters.connector.modrinth.models.project.version.Loader
 import dev.nyon.headquarters.connector.modrinth.models.project.version.Version
+import dev.nyon.headquarters.connector.modrinth.models.request.getEnumFieldAnnotation
 import io.ktor.client.request.*
+import kotlinx.serialization.SerialName
 
 suspend fun ModrinthConnector.listVersions(
-    query: String, loaders: List<String>? = null, gameVersions: List<String>? = null, featured: Boolean? = null
+    query: String, loaders: List<Loader>? = null, gameVersions: List<String>? = null, featured: Boolean? = null
 ) = request<List<Version>>("/project/$query/version") {
-    parameter("loaders", loaders?.merge())
+    parameter("loaders", loaders?.map {
+        it.getEnumFieldAnnotation<SerialName>()?.value ?: error("Loader ${it.name} doesn't have an SerialName")
+    }?.merge())
     parameter("game_versions", gameVersions?.merge())
     parameter("featured", featured)
 }
