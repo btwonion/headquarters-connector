@@ -31,3 +31,6 @@ sealed class Facet<T>(open val keyWord: String, open val value: T) {
 
 inline fun <reified A : Annotation> Enum<*>.getEnumFieldAnnotation(): A? =
     javaClass.getDeclaredField(name).getAnnotation(A::class.java)
+
+fun List<Facet<*>>.merge(): String =
+    joinToString(separator = ",", prefix = "[", postfix = "]") { it.toJsonObject() }

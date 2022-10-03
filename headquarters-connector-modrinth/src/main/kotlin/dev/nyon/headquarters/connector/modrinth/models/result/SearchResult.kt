@@ -4,6 +4,6 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class SearchResults(
+data class SearchResult(
     val hits: List<ProjectResult>, val offset: Int, val limit: Int, @SerialName("total_hits") val totalHits: Int
 )
