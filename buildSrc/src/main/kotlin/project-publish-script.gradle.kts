@@ -53,7 +53,7 @@ publishing {
 
             this.groupId = project.group.toString()
             this.artifactId = project.name
-            this.version = rootProject.version.toString()
+            this.version = BuildConstants.version.toString()
 
             pom {
                 name.set(project.name)
