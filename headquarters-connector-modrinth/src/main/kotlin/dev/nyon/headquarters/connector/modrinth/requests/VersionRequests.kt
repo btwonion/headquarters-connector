@@ -8,14 +8,14 @@ import io.ktor.client.request.*
 suspend fun ModrinthConnector.listVersions(
     query: String, loaders: List<String>? = null, gameVersions: List<String>? = null, featured: Boolean? = null
 ) = request<List<Version>>("/project/$query/version") {
-    parameter("loaders", loaders?.joinQuotedStrings())
-    parameter("game_versions", gameVersions?.joinQuotedStrings())
+    parameter("loaders", loaders?.merge())
+    parameter("game_versions", gameVersions?.merge())
     parameter("featured", featured)
 }
 
 suspend fun ModrinthConnector.getVersion(id: String) = request<Version>("/version/$id")
 suspend fun ModrinthConnector.getVersions(ids: List<String>) =
-    request<List<Version>>("/versions") { parameter("ids", ids.joinQuotedStrings()) }
+    request<List<Version>>("/versions") { parameter("ids", ids.merge()) }
 
 suspend fun ModrinthConnector.getVersionByHash(hash: String, algorithm: HashAlgorithm = HashAlgorithm.sha1) =
     request<Version>("/version_file/$hash") { parameter("algorithm", algorithm) }

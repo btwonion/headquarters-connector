@@ -13,5 +13,6 @@ class ModrinthConnector(
     fun List<Facet<*>>.merge(): String =
         joinToString(separator = ",", prefix = "[", postfix = "]") { it.toJsonObject() }
 
-    fun List<String>.joinQuotedStrings() = joinToString("\", ", "[\"", "\"]")
+    @JvmName("mergeString")
+    fun List<String>.merge() = joinToString("\",\"", "[\"", "\"]")
 }

@@ -6,4 +6,4 @@ import io.ktor.client.request.*
 
 suspend fun ModrinthConnector.getUser(query: String) = request<User>("/user/$query")
 suspend fun ModrinthConnector.getUsers(ids: List<String>) =
-    request<List<User>>("/users") { parameter("ids", ids.joinQuotedStrings()) }
+    request<List<User>>("/users") { parameter("ids", ids.merge()) }

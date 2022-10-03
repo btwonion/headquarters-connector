@@ -9,4 +9,4 @@ suspend fun ModrinthConnector.getProjectTeamMembers(query: String) =
 
 suspend fun ModrinthConnector.getTeamMembers(id: String) = request<List<TeamMember>>("/team/$id/members")
 suspend fun ModrinthConnector.getTeamMembers(ids: List<String>) =
-    request<List<List<TeamMember>>>("/teams") { parameter("ids", ids.joinQuotedStrings()) }
+    request<List<List<TeamMember>>>("/teams") { parameter("ids", ids.merge()) }

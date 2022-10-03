@@ -28,7 +28,7 @@ suspend fun ModrinthConnector.searchProjects(
 
 suspend fun ModrinthConnector.getProject(query: String) = request<Project>("/project/$query")
 suspend fun ModrinthConnector.getProjects(ids: List<String>) =
-    request<List<Project>>("/projects") { parameter("ids", ids.joinQuotedStrings()) }
+    request<List<Project>>("/projects") { parameter("ids", ids.merge()) }
 
 suspend fun ModrinthConnector.getProjectDependencies(query: String) =
     request<DependencyResult>("/project/$query/dependencies")
