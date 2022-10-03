@@ -1,5 +1,6 @@
-package dev.nyon.headquarters.connector.modrinth.models.project
+package dev.nyon.headquarters.connector.modrinth.models.project.version
 
+import dev.nyon.headquarters.connector.modrinth.models.project.Dependency
 import kotlinx.datetime.Instant
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -12,7 +13,7 @@ data class Version(
     val dependencies: List<Dependency>,
     @SerialName("game_versions") val gameVersions: List<String>,
     @SerialName("version_type") val versionType: VersionType,
-    val loaders: List<String>,
+    val loaders: List<Loader>,
     val featured: Boolean,
     val id: String,
     @SerialName("project_id") val projectID: String,
@@ -21,33 +22,3 @@ data class Version(
     val downloads: Int,
     val files: List<File>
 )
-
-@Serializable
-enum class VersionType {
-    @SerialName("release")
-    Release,
-
-    @SerialName("alpha")
-    Alpha,
-
-    @SerialName("beta")
-    Beta
-}
-
-@Serializable
-data class File(
-    val hashes: Hashes,
-    val url: String,
-    @SerialName("filename") val fileName: String,
-    val primary: Boolean,
-    val size: Int
-)
-
-@Serializable
-data class Hashes(val sha512: String, val sha1: String)
-
-@Serializable
-enum class HashAlgorithm {
-    sha1,
-    sha512
-}
