@@ -29,12 +29,9 @@ tasks {
 
         dokkaSourceSets {
             configureEach {
-                includes.from(
-                    buildDir.resolve("docs-markdown").listFiles()!!
-                        .sortedBy { if (it.name == "Module.md") "0" else it.name }
-                        .map { "build/docs-markdown/${it.name}" }
-                        .toTypedArray()
-                )
+                includes.from(buildDir.resolve("docs-markdown").listFiles()!!
+                    .sortedBy { if (it.name == "Module.md") "0" else it.name }.map { "build/docs-markdown/${it.name}" }
+                    .toTypedArray())
 
                 sourceLink {
                     localDirectory.set(file("src/main/kotlin"))
@@ -44,13 +41,6 @@ tasks {
                         )
                     )
                     remoteLineSuffix.set("#L")
-                }
-
-                listOf("internal", "mixin").forEach {
-                    perPackageOption {
-                        matchingRegex.set(""".*\.$it.*""")
-                        suppress.set(true)
-                    }
                 }
             }
         }
