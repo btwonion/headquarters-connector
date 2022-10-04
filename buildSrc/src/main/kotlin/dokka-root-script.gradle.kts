@@ -6,6 +6,10 @@ plugins {
     id("org.jetbrains.dokka")
 }
 
+repositories {
+    mavenCentral()
+}
+
 tasks {
     withType<DokkaMultiModuleTask> {
         includes.from("dokka/includes/main.md")

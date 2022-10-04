@@ -6,6 +6,10 @@ plugins {
     id("org.jetbrains.dokka")
 }
 
+repositories {
+    mavenCentral()
+}
+
 tasks {
     val processDokkaMarkdown = register<Copy>("processDokkaMarkdown") {
         from(layout.projectDirectory.dir("docs"))
@@ -44,5 +48,7 @@ tasks {
                 }
             }
         }
+
+        outputDirectory.set(rootProject.rootDir.resolve("docs"))
     }
 }
