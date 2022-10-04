@@ -21,7 +21,7 @@ tasks {
             "dependencyNotice" to """
                 ### Dependency
                 ```kt
-                implementation("dev.nyon:${project.name}:${BuildConstants.version}")
+                implementation("dev.nyon:${project.name}:${rootProject.version}")
                 ```
             """.trimIndent()
         )

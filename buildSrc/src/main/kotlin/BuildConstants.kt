@@ -1,5 +1,4 @@
 object BuildConstants {
-    const val version = "1.0.0"
     val authors = listOf("btwonion")
     const val githubRepo = "btwonion/headquarters-connector"
     val isSnapshot = false

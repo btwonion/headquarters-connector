@@ -13,12 +13,12 @@ githubRelease {
     overwrite(true)
     owner(split[0])
     repo(split[1])
-    releaseName("v${BuildConstants.version}")
+    releaseName("v${rootProject.version}")
     targetCommitish("master")
-    tagName("v${BuildConstants.version}")
+    tagName("v${rootProject.version}")
     prerelease(BuildConstants.isSnapshot)
     releaseAssets(tasks["build"].outputs.files)
-    body("inital release")
+    body("add javadocs")
 }
 
 java {
@@ -53,7 +53,7 @@ publishing {
 
             this.groupId = project.group.toString()
             this.artifactId = project.name
-            this.version = BuildConstants.version.toString()
+            this.version = rootProject.version.toString()
 
             pom {
                 name.set(project.name)
