@@ -1,1 +1,1 @@
-{"@class":"org.jetbrains.dokka.base.templating.AddToSourcesetDependencies","moduleName":"headquarters-connector-modrinth","content":{":headquarters-connector-modrinth:dokkaHtmlPartial/main":[]}}
+sourceset_dependencies = '{":headquarters-connector-modrinth:dokkaHtmlPartial/main":[],":headquarters-connector-core:dokkaHtmlPartial/main":[]}'

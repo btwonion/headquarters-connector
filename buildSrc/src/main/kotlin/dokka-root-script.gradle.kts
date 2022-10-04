@@ -17,5 +17,7 @@ tasks {
         pluginConfiguration<DokkaBase, DokkaBaseConfiguration> {
             customStyleSheets = listOf(*(rootDir.resolve("dokka/stylesheets").listFiles() ?: emptyArray()))
         }
+
+        outputDirectory.set(rootProject.rootDir.resolve("docs"))
     }
 }

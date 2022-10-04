@@ -1,6 +1,9 @@
 $dokka.format:html-v1
 $dokka.linkExtension:html
 
+module:headquarters-connector-core
+dev.nyon.headquarters.connector.api
+module:headquarters-connector-modrinth
 dev.nyon.headquarters.connector.modrinth
 dev.nyon.headquarters.connector.modrinth.models.project
 dev.nyon.headquarters.connector.modrinth.models.project.team
@@ -10,4 +13,3 @@ dev.nyon.headquarters.connector.modrinth.models.result
 dev.nyon.headquarters.connector.modrinth.models.tags
 dev.nyon.headquarters.connector.modrinth.models.user
 dev.nyon.headquarters.connector.modrinth.requests
-
