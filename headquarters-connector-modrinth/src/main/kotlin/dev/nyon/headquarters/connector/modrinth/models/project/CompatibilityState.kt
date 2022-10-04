@@ -3,8 +3,11 @@ package dev.nyon.headquarters.connector.modrinth.models.project
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+/**
+ * The compatibility state of a project
+ */
 @Serializable
-enum class ClientSide {
+enum class CompatibilityState {
     @SerialName("required")
     Required,
 

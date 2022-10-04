@@ -3,6 +3,9 @@ package dev.nyon.headquarters.connector.modrinth.models.project.version
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+/**
+ * The possible loaders of a version
+ */
 @Serializable
 enum class Loader {
     @SerialName("bukkit")
