@@ -5,5 +5,5 @@ plugins {
 allprojects {
     group = "dev.nyon"
     description = "API for requesting stuff from modrinth http api"
-    version = "1.1.0"
+    version = "1.2.0"
 }
