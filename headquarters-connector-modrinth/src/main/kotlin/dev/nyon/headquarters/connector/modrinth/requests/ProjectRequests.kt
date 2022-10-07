@@ -9,7 +9,10 @@ import dev.nyon.headquarters.connector.modrinth.models.request.merge
 import dev.nyon.headquarters.connector.modrinth.models.result.DependencyResult
 import dev.nyon.headquarters.connector.modrinth.models.result.SearchResult
 import io.ktor.client.request.*
+import io.ktor.client.statement.*
+import io.ktor.http.*
 import kotlinx.serialization.SerialName
+import kotlinx.serialization.decodeFromString
 
 /**
  * Searches for projects with the given settings
@@ -32,13 +35,21 @@ suspend fun ModrinthConnector.searchProjects(
     offset: Int? = null,
     limit: Int? = null,
     filters: String? = null
-): SearchResult? = request<SearchResult>("/search") {
-    parameter("query", query)
-    parameter("facets", facets?.merge())
-    parameter("index", index?.getEnumFieldAnnotation<SerialName>()?.value)
-    parameter("offset", offset)
-    parameter("limit", limit)
-    parameter("filters", filters)
+): SearchResult {
+    val statement = client.prepareRequest("$baseUrl/search") {
+        method = HttpMethod.Get
+        parameter("query", query)
+        parameter("facets", facets?.merge())
+        parameter("index", index?.getEnumFieldAnnotation<SerialName>()?.value)
+        parameter("offset", offset)
+        parameter("limit", limit)
+        parameter("filters", filters)
+    }
+
+    val response = statement.execute()
+    return if (!response.status.isSuccess()) json.decodeFromString<SearchResult.SearchResultFailure>(response.bodyAsText()) else json.decodeFromString<SearchResult.SearchResultSuccess>(
+        response.bodyAsText()
+    )
 }
 
 /**

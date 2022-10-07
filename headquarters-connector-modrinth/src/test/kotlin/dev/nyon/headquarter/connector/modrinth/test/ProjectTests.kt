@@ -16,13 +16,13 @@ class ProjectTests : CommonRequestTest({
 
     test("searchProjects") {
         val result = connector.searchProjects(
-            "SimpleAutoDrop", facets = listOf(
+            "asdasddad asd a", facets = listOf(
                 Facet.ProjectType(listOf(ProjectType.Mod)), Facet.Version(
-                    listOf("1.19.2")
+                    listOf(" awd as")
                 )
             ), limit = 1, index = Index.Downloads
         )
-        result.shouldNotBeNull()
+        println(result.toString())
     }
 
     test("getProjects") {
