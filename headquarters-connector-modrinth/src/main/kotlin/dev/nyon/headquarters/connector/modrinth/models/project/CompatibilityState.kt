@@ -15,5 +15,8 @@ enum class CompatibilityState {
     Optional,
 
     @SerialName("unsupported")
-    Unsupported
+    Unsupported,
+
+    @SerialName("unknown")
+    Unknown
 }
