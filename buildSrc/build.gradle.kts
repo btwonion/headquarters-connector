@@ -17,7 +17,7 @@ dependencies {
     compileOnly(pluginDep("org.jetbrains.kotlin.plugin.serialization", embeddedKotlinVersion))
     runtimeOnly(pluginDep("org.jetbrains.kotlin.plugin.serialization", kotlinVersion))
 
-    val dokkaVersion = "1.7.10"
+    val dokkaVersion = "1.7.20"
     compileOnly("org.jetbrains.dokka:dokka-gradle-plugin:$dokkaVersion")
     runtimeOnly("org.jetbrains.dokka:dokka-gradle-plugin:$dokkaVersion")
     compileOnly("org.jetbrains.dokka:dokka-base:$dokkaVersion")

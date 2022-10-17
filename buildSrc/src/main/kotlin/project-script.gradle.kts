@@ -19,6 +19,12 @@ dependencies {
     implementation("io.ktor:ktor-client-cio:$ktorVersion")
     implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
     implementation("io.ktor:ktor-client-content-negotiation:$ktorVersion")
+
+
+    val kotestVersion = BuildConstants.kotestVersion
+    testImplementation("io.kotest:kotest-runner-junit5:$kotestVersion")
+    testImplementation("io.kotest:kotest-assertions-core:$kotestVersion")
+    testImplementation("io.kotest:kotest-property:$kotestVersion")
 }
 
 tasks {
@@ -33,5 +39,9 @@ tasks {
         kotlinOptions {
             jvmTarget = "17"
         }
+    }
+
+    withType<Test>().configureEach {
+        useJUnitPlatform()
     }
 }
