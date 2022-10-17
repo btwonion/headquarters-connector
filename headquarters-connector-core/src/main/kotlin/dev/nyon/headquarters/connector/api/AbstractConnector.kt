@@ -34,9 +34,9 @@ abstract class AbstractConnector {
      * @return the deserialized version of [T]
      */
     suspend inline fun <reified T> request(
-        url: String, crossinline builder: HttpRequestBuilder.() -> Unit = {}
+        url: String, useBaseUrl: Boolean = true, crossinline builder: HttpRequestBuilder.() -> Unit = {}
     ): T? {
-        val statement = client.prepareRequest("$baseUrl$url") {
+        val statement = client.prepareRequest(if (useBaseUrl) "$baseUrl$url" else url) {
             method = HttpMethod.Get
             builder()
         }
