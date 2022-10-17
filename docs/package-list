@@ -13,3 +13,7 @@ dev.nyon.headquarters.connector.modrinth.models.result
 dev.nyon.headquarters.connector.modrinth.models.tags
 dev.nyon.headquarters.connector.modrinth.models.user
 dev.nyon.headquarters.connector.modrinth.requests
+module:headquarters-connector-mojang
+dev.nyon.headquarters.connector.mojang
+dev.nyon.headquarters.connector.mojang.models
+dev.nyon.headquarters.connector.mojang.models.package

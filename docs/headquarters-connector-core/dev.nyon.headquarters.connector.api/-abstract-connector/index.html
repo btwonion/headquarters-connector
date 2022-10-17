@@ -4,10 +4,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>AbstractConnector</title>
 <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
-const savedDarkMode = storage ? JSON.parse(storage) : false
-if(savedDarkMode === true){
-    document.getElementsByTagName("html")[0].classList.add("theme-dark")
-}</script>
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
 <script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
 <link href="../../../styles/style.css" rel="Stylesheet">
 <link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
@@ -18,7 +26,8 @@ if(savedDarkMode === true){
 <script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../../scripts/main.js" defer></script>
-<script type="text/javascript" src="../../../scripts/prism.js" async></script></head>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
 <body>
 <div class="navigation-wrapper" id="navigation-wrapper">
     <div id="leftToggler"><span class="icon-toggler"></span></div>
@@ -38,13 +47,13 @@ if(savedDarkMode === true){
     </div>
     <div id="main">
 <div class="main-content" id="content" pageids="headquarters-connector-core::dev.nyon.headquarters.connector.api/AbstractConnector///PointingToDeclaration//-1340146635">
-  <div class="breadcrumbs"><a href="../../index.html">headquarters-connector-core</a><span class="delimiter">/</span><a href="../index.html">dev.nyon.headquarters.connector.api</a><span class="delimiter">/</span><a href="index.html">AbstractConnector</a></div>
+  <div class="breadcrumbs"><a href="../../index.html">headquarters-connector-core</a><span class="delimiter">/</span><a href="../index.html">dev.nyon.headquarters.connector.api</a><span class="delimiter">/</span><span class="current">AbstractConnector</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Abstract</span><wbr><span><span>Connector</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":headquarters-connector-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="index.html">AbstractConnector</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">The abstract connector which handles the outgoing http requests</p></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":headquarters-connector-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="index.html">AbstractConnector</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/btwonion/headquarters-connector/tree/master/headquarters-connector-core/src/main/kotlin/dev/nyon/headquarters/connector/api/AbstractConnector.kt#L10">source</a>)</span></span></div><p class="paragraph">The abstract connector which handles the outgoing http requests</p></div></div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Sources">Sources</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
     <div class="tabs-section-body">
       <h2 class="tabbedcontent">Constructors</h2>
       <div class="table" data-togglable="Constructors"><a data-name="-15752952%2FConstructors%2F-1340146635" anchor-label="AbstractConnector" id="-15752952%2FConstructors%2F-1340146635" data-filterable-set=":headquarters-connector-core:dokkaHtmlPartial/main"></a>
@@ -57,24 +66,24 @@ if(savedDarkMode === true){
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":headquarters-connector-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-abstract-connector.html"><span class="token function">AbstractConnector</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":headquarters-connector-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-abstract-connector.html"><span class="token function">AbstractConnector</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
               </div>
             </div>
           </div>
         </div>
       </div>
       <h2 class="">Functions</h2>
-      <div class="table" data-togglable="Functions"><a data-name="-1070572904%2FFunctions%2F-1340146635" anchor-label="request" id="-1070572904%2FFunctions%2F-1340146635" data-filterable-set=":headquarters-connector-core:dokkaHtmlPartial/main"></a>
+      <div class="table" data-togglable="Functions"><a data-name="-1208590244%2FFunctions%2F-1340146635" anchor-label="request" id="-1208590244%2FFunctions%2F-1340146635" data-filterable-set=":headquarters-connector-core:dokkaHtmlPartial/main"></a>
         <div class="table-row" data-filterable-current=":headquarters-connector-core:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-core:dokkaHtmlPartial/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="request.html"><span><span>request</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1070572904%2FFunctions%2F-1340146635"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1208590244%2FFunctions%2F-1340146635"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":headquarters-connector-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="request.html">T</a><span class="token operator">&gt; </span><a href="request.html"><span class="token function">request</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">url<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">crossinline </span>builder<span class="token operator">: </span><span class="token keyword"></span><span data-unresolved-link="io.ktor.client.request/HttpRequestBuilder///PointingToDeclaration/">HttpRequestBuilder</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="request.html">T</a><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Performs the http request to the given url</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":headquarters-connector-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="request.html">T</a><span class="token operator">&gt; </span><a href="request.html"><span class="token function">request</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">url<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">useBaseUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">crossinline </span>builder<span class="token operator">: </span><span class="token keyword"></span><span data-unresolved-link="io.ktor.client.request/HttpRequestBuilder///PointingToDeclaration/">HttpRequestBuilder</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="request.html">T</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Performs the http request to the given url</p></div></div></div>
               </div>
             </div>
           </div>
@@ -91,7 +100,7 @@ if(savedDarkMode === true){
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":headquarters-connector-core:dokkaHtmlPartial/main"><a data-name="1242277173%2FProperties%2F-1340146635" anchor-label="baseUrl" id="1242277173%2FProperties%2F-1340146635" data-filterable-set=":headquarters-connector-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="base-url.html">baseUrl</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1242277173%2FProperties%2F-1340146635" anchor-label="baseUrl" id="1242277173%2FProperties%2F-1340146635" data-filterable-set=":headquarters-connector-core:dokkaHtmlPartial/main"></a><p class="paragraph">The url to the target http api</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":headquarters-connector-core:dokkaHtmlPartial/main"><a data-name="1242277173%2FProperties%2F-1340146635" anchor-label="baseUrl" id="1242277173%2FProperties%2F-1340146635" data-filterable-set=":headquarters-connector-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="base-url.html">baseUrl</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><a data-name="1242277173%2FProperties%2F-1340146635" anchor-label="baseUrl" id="1242277173%2FProperties%2F-1340146635" data-filterable-set=":headquarters-connector-core:dokkaHtmlPartial/main"></a><p class="paragraph">The url to the target http api</p></div></div></div>
               </div>
             </div>
           </div>
@@ -106,7 +115,7 @@ if(savedDarkMode === true){
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":headquarters-connector-core:dokkaHtmlPartial/main"><a data-name="-229401860%2FProperties%2F-1340146635" anchor-label="client" id="-229401860%2FProperties%2F-1340146635" data-filterable-set=":headquarters-connector-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="client.html">client</a><span class="token operator">: </span><span data-unresolved-link="io.ktor.client/HttpClient///PointingToDeclaration/">HttpClient</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-229401860%2FProperties%2F-1340146635" anchor-label="client" id="-229401860%2FProperties%2F-1340146635" data-filterable-set=":headquarters-connector-core:dokkaHtmlPartial/main"></a><p class="paragraph">The <span data-unresolved-link="io.ktor.client/HttpClient///PointingToDeclaration/">HttpClient</span> which performs the http requests</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":headquarters-connector-core:dokkaHtmlPartial/main"><a data-name="-229401860%2FProperties%2F-1340146635" anchor-label="client" id="-229401860%2FProperties%2F-1340146635" data-filterable-set=":headquarters-connector-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="client.html">client</a><span class="token operator">: </span><span data-unresolved-link="io.ktor.client/HttpClient///PointingToDeclaration/">HttpClient</span></div><div class="brief "><a data-name="-229401860%2FProperties%2F-1340146635" anchor-label="client" id="-229401860%2FProperties%2F-1340146635" data-filterable-set=":headquarters-connector-core:dokkaHtmlPartial/main"></a><p class="paragraph">The <span data-unresolved-link="io.ktor.client/HttpClient///PointingToDeclaration/">HttpClient</span> which performs the http requests</p></div></div></div>
               </div>
             </div>
           </div>
@@ -121,22 +130,9 @@ if(savedDarkMode === true){
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":headquarters-connector-core:dokkaHtmlPartial/main"><a data-name="1762742015%2FProperties%2F-1340146635" anchor-label="json" id="1762742015%2FProperties%2F-1340146635" data-filterable-set=":headquarters-connector-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="json.html">json</a><span class="token operator">: </span><span data-unresolved-link="kotlinx.serialization.json/Json///PointingToDeclaration/">Json</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1762742015%2FProperties%2F-1340146635" anchor-label="json" id="1762742015%2FProperties%2F-1340146635" data-filterable-set=":headquarters-connector-core:dokkaHtmlPartial/main"></a><p class="paragraph">The <span data-unresolved-link="kotlinx.serialization.json/Json///PointingToDeclaration/">Json</span> to deserialize the requested object</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":headquarters-connector-core:dokkaHtmlPartial/main"><a data-name="1762742015%2FProperties%2F-1340146635" anchor-label="json" id="1762742015%2FProperties%2F-1340146635" data-filterable-set=":headquarters-connector-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="json.html">json</a><span class="token operator">: </span><span data-unresolved-link="kotlinx.serialization.json/Json///PointingToDeclaration/">Json</span></div><div class="brief "><a data-name="1762742015%2FProperties%2F-1340146635" anchor-label="json" id="1762742015%2FProperties%2F-1340146635" data-filterable-set=":headquarters-connector-core:dokkaHtmlPartial/main"></a><p class="paragraph">The <span data-unresolved-link="kotlinx.serialization.json/Json///PointingToDeclaration/">Json</span> to deserialize the requested object</p></div></div></div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <h2 class="">Sources</h2>
-      <div class="table" data-togglable="Sources"><a data-name="87989656%2FSource%2F-1340146635" anchor-label="https://github.com/btwonion/headquarters-connector/tree/master/headquarters-connector-core/src/main/kotlin/dev/nyon/headquarters/connector/api/AbstractConnector.kt#L10" id="87989656%2FSource%2F-1340146635" data-filterable-set=":headquarters-connector-core:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":headquarters-connector-core:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-core:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="https://github.com/btwonion/headquarters-connector/tree/master/headquarters-connector-core/src/main/kotlin/dev/nyon/headquarters/connector/api/AbstractConnector.kt#L10">jvm source</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="87989656%2FSource%2F-1340146635"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div></div>
           </div>
         </div>
       </div>
