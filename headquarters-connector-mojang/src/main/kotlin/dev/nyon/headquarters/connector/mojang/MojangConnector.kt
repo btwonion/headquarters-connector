@@ -11,7 +11,7 @@ import kotlinx.serialization.json.Json
  *
  * @param client the [HttpClient] which performs the http requests
  * @param json The [Json] to deserialize the requested object
- * @param baseUrl The base api url of modrinth (default is the V2 API of Modrinth)
+ * @param baseUrl The base api url of the mojang launcher api
  */
 class MojangConnector(
     override val client: HttpClient,
