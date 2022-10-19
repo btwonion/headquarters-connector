@@ -11,10 +11,9 @@ import kotlinx.serialization.json.Json
 
 @Suppress("UNCHECKED_CAST")
 abstract class CommonRequestTest(block: CommonRequestTest.() -> Unit) : FunSpec(block as FunSpec.() -> Unit) {
-    @OptIn(ExperimentalSerializationApi::class)
     private val ktorClientJson = Json {
+        ignoreUnknownKeys = true
         prettyPrint = true
-        prettyPrintIndent = "  "
     }
 
     private val ktorClient = HttpClient(CIO) {

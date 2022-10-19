@@ -6,5 +6,5 @@ import kotlinx.serialization.Serializable
 data class CompatibleLoader(
     val loader: Loader,
     val intermediary: Intermediary,
-    val launcherMeta: LauncherMeta
+    val launcherMeta: ILauncherMeta
 )
