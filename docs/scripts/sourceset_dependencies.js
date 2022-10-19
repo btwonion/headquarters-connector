@@ -1,1 +1,1 @@
-sourceset_dependencies = '{":headquarters-connector-modrinth:dokkaHtmlPartial/main":[],":headquarters-connector-mojang:dokkaHtmlPartial/main":[],":headquarters-connector-core:dokkaHtmlPartial/main":[]}'
+sourceset_dependencies = '{":headquarters-connector-modrinth:dokkaHtmlPartial/main":[],":headquarters-connector-mojang:dokkaHtmlPartial/main":[],":headquarters-connector-fabric:dokkaHtmlPartial/main":[],":headquarters-connector-core:dokkaHtmlPartial/main":[]}'
