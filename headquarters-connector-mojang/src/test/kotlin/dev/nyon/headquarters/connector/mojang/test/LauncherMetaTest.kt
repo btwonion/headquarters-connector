@@ -9,7 +9,7 @@ class LauncherMetaTest : CommonRequestTest({
     }
 
     test("versionPackage") {
-        val result = connector.getVersionPackage("1.18-pre1")
+        val result = connector.getVersionPackage("22w43a")
         result.shouldNotBeNull()
         println(result)
     }

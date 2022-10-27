@@ -27,10 +27,13 @@ data class VersionPackage(
 data class JavaVersion(val component: String, val majorVersion: Int)
 
 @Serializable
-data class Library(val downloads: LibraryDownloads, val name: String, val rules: List<LibraryRule>?)
+data class Library(val downloads: LibraryDownloads, val name: String, val rules: List<LibraryRule>? = null)
 
 @Serializable
-data class LibraryRule(val action: RuleAction, val os: List<Os>)
+data class LibraryRule(val action: RuleAction, val os: OsEntry? = null)
+
+@Serializable
+data class OsEntry(val name: Os)
 
 @Serializable
 enum class Os {
