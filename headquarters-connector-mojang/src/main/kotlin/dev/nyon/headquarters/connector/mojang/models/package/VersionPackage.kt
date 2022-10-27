@@ -2,6 +2,7 @@ package dev.nyon.headquarters.connector.mojang.models.`package`
 
 import dev.nyon.headquarters.connector.mojang.models.MinecraftVersionType
 import kotlinx.datetime.Instant
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -26,7 +27,22 @@ data class VersionPackage(
 data class JavaVersion(val component: String, val majorVersion: Int)
 
 @Serializable
-data class Library(val downloads: LibraryDownloads)
+data class Library(val downloads: LibraryDownloads, val name: String, val rules: List<LibraryRule>?)
+
+@Serializable
+data class LibraryRule(val action: RuleAction, val os: List<Os>)
+
+@Serializable
+enum class Os {
+    @SerialName("osx")
+    OsX,
+
+    @SerialName("linux")
+    Linux,
+
+    @SerialName("windows")
+    Windows
+}
 
 @Serializable
 data class LibraryDownloads(val artifact: LibraryArtifact, val classifiers: Map<String, LibraryArtifact>? = null)
