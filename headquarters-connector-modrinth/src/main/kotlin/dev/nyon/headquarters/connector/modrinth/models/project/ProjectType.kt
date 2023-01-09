@@ -15,5 +15,11 @@ enum class ProjectType {
     ModPack,
 
     @SerialName("resourcepack")
-    ResourcePack
+    ResourcePack,
+
+    @SerialName("shader")
+    Shader,
+
+    @SerialName("datapack")
+    Datapack
 }
