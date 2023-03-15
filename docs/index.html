@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8" content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>All modules</title>
     <link href="images/logo-icon.svg" rel="icon" type="image/svg">
     <script>var pathToRoot = "";</script>
@@ -13,34 +13,34 @@
         }
     } else {
         const savedDarkMode = JSON.parse(storage)
-        if (savedDarkMode === true) {
+        if(savedDarkMode === true) {
             document.getElementsByTagName("html")[0].classList.add("theme-dark")
         }
     }
     </script>
-    <script async="async" src="scripts/sourceset_dependencies.js" type="text/javascript"></script>
-    <link href="styles/style.css" rel="Stylesheet">
-    <link href="styles/jetbrains-mono.css" rel="Stylesheet">
-    <link href="styles/main.css" rel="Stylesheet">
-    <link href="styles/prism.css" rel="Stylesheet">
-    <link href="styles/logo-styles.css" rel="Stylesheet">
-    <script async="async" src="scripts/clipboard.js" type="text/javascript"></script>
-    <script async="async" src="scripts/navigation-loader.js" type="text/javascript"></script>
-    <script async="async" src="scripts/platform-content-handler.js" type="text/javascript"></script>
-    <script defer="defer" src="scripts/main.js" type="text/javascript"></script>
-    <script async="async" src="scripts/prism.js" type="text/javascript"></script>
-    <script defer="defer" src="scripts/symbol-parameters-wrapper_deferred.js" type="text/javascript"></script>
+<script type="text/javascript" src="scripts/sourceset_dependencies.js" async="async"></script>
+<link href="styles/style.css" rel="Stylesheet">
+<link href="styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="styles/main.css" rel="Stylesheet">
+<link href="styles/prism.css" rel="Stylesheet">
+<link href="styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
 </head>
 <body>
 <div class="navigation-wrapper" id="navigation-wrapper">
     <div id="leftToggler"><span class="icon-toggler"></span></div>
     <div class="library-name">
-        <a href="index.html">
-            <span>headquarters-connector</span>
-        </a>
+            <a href="index.html">
+                    <span>headquarters-connector</span>
+            </a>
     </div>
     <div>
-    </div>
+1.4.2    </div>
     <div class="pull-right d-flex">
         <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
         <div id="searchBar"></div>
@@ -51,85 +51,71 @@
         <div id="sideMenu"></div>
     </div>
     <div id="main">
-        <div class="main-content" id="content"
-             pageIds="headquarters-connector::.ext/allModules///PointingToDeclaration//0">
-            <div class="breadcrumbs"></div>
-            <div class="cover ">
-                <div class="cover ">
-                    <p class="paragraph">headquarters-connector is a http api client library for using the Modrinth and
-                        Mojang http api </br> This library is written in <a href="https://kotlinlang.org">Kotlin</a> and
-                        uses <a href="https://ktor.io">Ktor</a>, <a href="https://github.com/Kotlin/kotlinx.coroutines">Coroutines</a>,
-                        <a href="https://github.com/Kotlin/kotlinx.serialization">Serialization</a> and <a
-                                href="https://github.com/Kotlin/kotlinx-datetime">Kotlin Datetime</a></p>
-                    <h3 class=""> Setup with Gradle</h3>
-                    <p class="paragraph">Click on each module below to get started with it and to see how to use it in
-                        your build environment.</p>
-                </div>
-                <h2 class="">All modules:</h2>
-                <div class="table"><a anchor-label="headquarters-connector-core" data-filterable-set=""
-                                      data-name="-900381528%2FMain%2F0" id="-900381528%2FMain%2F0"></a>
-                    <div class="table-row">
-                        <div class="main-subrow ">
-                            <div class="w-100"><span class="inline-flex">
+<div class="main-content" id="content" pageIds="headquarters-connector::.ext/allModules///PointingToDeclaration//0">
+  <div class="breadcrumbs"></div>
+  <div class="cover ">
+    <div class="cover ">
+      <p class="paragraph">headquarters-connector is a http api for making requests to minecraft related http apis </br> This library is written in <a href="https://kotlinlang.org">Kotlin</a> and uses <a href="https://ktor.io">Ktor</a>, <a href="https://github.com/Kotlin/kotlinx.coroutines">Coroutines</a>, <a href="https://github.com/Kotlin/kotlinx.serialization">Serialization</a> and <a href="https://github.com/Kotlin/kotlinx-datetime">Kotlin Datetime</a></p>
+      <h3 class=""> Setup with Gradle</h3>
+      <p class="paragraph">Click on each module below to get started with it and to see how to use it in your build environment.</p>
+    </div>
+    <h2 class="">All modules:</h2>
+    <div class="table"><a data-name="-900381528%2FMain%2F0" anchor-label="headquarters-connector-core" id="-900381528%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
               <div><a href="headquarters-connector-core/index.html">headquarters-connector-core</a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-900381528%2FMain%2F0"></span>
-                <div class="copy-popup-wrapper "><span
-                        class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-                            <div><span class="brief-comment">
+          <div><span class="brief-comment">
               <p class="paragraph">The core module which contains an abstract connector class to simply extend this library</p>
             </span></div>
-                        </div>
-                    </div>
-                    <a anchor-label="headquarters-connector-fabric" data-filterable-set=""
-                       data-name="1871090914%2FMain%2F0" id="1871090914%2FMain%2F0"></a>
-                    <div class="table-row">
-                        <div class="main-subrow ">
-                            <div class="w-100"><span class="inline-flex">
+        </div>
+      </div>
+<a data-name="1871090914%2FMain%2F0" anchor-label="headquarters-connector-fabric" id="1871090914%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
               <div><a href="headquarters-connector-fabric/index.html">headquarters-connector-fabric</a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1871090914%2FMain%2F0"></span>
-                <div class="copy-popup-wrapper "><span
-                        class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-                            <div><span class="brief-comment"></span></div>
-                        </div>
-                    </div>
-                    <a anchor-label="headquarters-connector-modrinth" data-filterable-set=""
-                       data-name="-1731359618%2FMain%2F0" id="-1731359618%2FMain%2F0"></a>
-                    <div class="table-row">
-                        <div class="main-subrow ">
-                            <div class="w-100"><span class="inline-flex">
+          <div><span class="brief-comment"></span></div>
+        </div>
+      </div>
+<a data-name="-1731359618%2FMain%2F0" anchor-label="headquarters-connector-modrinth" id="-1731359618%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
               <div><a href="headquarters-connector-modrinth/index.html">headquarters-connector-modrinth</a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1731359618%2FMain%2F0"></span>
-                <div class="copy-popup-wrapper "><span
-                        class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-                            <div><span class="brief-comment">
+          <div><span class="brief-comment">
               <p class="paragraph">The modrinth http api client</p>
             </span></div>
-                        </div>
-                    </div>
-                    <a anchor-label="headquarters-connector-mojang" data-filterable-set=""
-                       data-name="2112731221%2FMain%2F0" id="2112731221%2FMain%2F0"></a>
-                    <div class="table-row">
-                        <div class="main-subrow ">
-                            <div class="w-100"><span class="inline-flex">
+        </div>
+      </div>
+<a data-name="2112731221%2FMain%2F0" anchor-label="headquarters-connector-mojang" id="2112731221%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
               <div><a href="headquarters-connector-mojang/index.html">headquarters-connector-mojang</a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2112731221%2FMain%2F0"></span>
-                <div class="copy-popup-wrapper "><span
-                        class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-                            <div><span class="brief-comment"></span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          <div><span class="brief-comment"></span></div>
         </div>
-        <div class="footer">
-            <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span
                 class="pull-right"><span>Generated by </span><a
                 href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
-        </div>
+      </div>
     </div>
 </div>
 </body>

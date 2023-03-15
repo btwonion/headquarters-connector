@@ -14,6 +14,7 @@ dev.nyon.headquarters.connector.modrinth.models.project.team
 dev.nyon.headquarters.connector.modrinth.models.project.version
 dev.nyon.headquarters.connector.modrinth.models.request
 dev.nyon.headquarters.connector.modrinth.models.result
+dev.nyon.headquarters.connector.modrinth.models.statistics
 dev.nyon.headquarters.connector.modrinth.models.tags
 dev.nyon.headquarters.connector.modrinth.models.user
 dev.nyon.headquarters.connector.modrinth.requests

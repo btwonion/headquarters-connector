@@ -44,7 +44,7 @@
     --inactive-tab-border-color: rgba(164, 164, 170, 0.7);
 
     --active-section-color: #7F52FF;
-    --inactive-section-color: rgba(25, 25, 28, .7);
+    --inactive-section-color: rgba(25,25,28,.7);
 
     --sidemenu-section-active-color: #7F52FF;
 }
@@ -752,7 +752,7 @@ small {
 
 .deprecation-content {
     margin: 20px 10px;
-    border: 1px solid var(--border-color);
+    border:1px solid var(--border-color);
     padding: 13px 15px 16px 15px;
 }
 
@@ -825,6 +825,11 @@ small {
 
 .platform-tag.js-like {
     background-color: #FED236;
+    color: white;
+}
+
+.platform-tag.wasm-like {
+    background-color: #654FF0;
     color: white;
 }
 
@@ -942,13 +947,14 @@ td.content {
 }
 
 .platform-hinted > .content:not([data-active]),
-.tabs-section-body > *:not([data-active]) {
+.tabs-section-body *[data-togglable]:not([data-active]) {
     display: none;
 }
 
-/*Work around an issue: https://github.com/JetBrains/kotlin-playground/issues/91*/
-.platform-hinted[data-togglable="Samples"] > .content:not([data-active]),
-.tabs-section-body > *[data-togglable="Samples"]:not([data-active]) {
+/* Work around an issue: https://github.com/JetBrains/kotlin-playground/issues/91
+Applies for main description blocks with platform tabs.
+Just in case of possible performance degradation it excluding tabs with briefs on classlike page */
+#content > div:not(.tabbedcontent) .sourceset-dependent-content:not([data-active]) {
     display: block !important;
     visibility: hidden;
     height: 0;
@@ -1281,7 +1287,6 @@ div.runnablesample {
         display: none;
     }
 }
-
 .clearfix::after {
     content: ' ';
     clear: both;
@@ -1291,4 +1296,12 @@ div.runnablesample {
 
 .floating-right {
     float: right;
+}
+
+/*
+the hack to hide the headers inside tabs for a package page because each tab
+has only one header, and the header text is the same as the tab name, so no point in showing it
+*/
+.main-content[data-page-type="package"] .tabs-section-body h2 {
+    display: none;
 }

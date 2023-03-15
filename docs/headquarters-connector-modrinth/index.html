@@ -1,11 +1,9 @@
 <!doctype html>
 <html>
 <head>
-    <meta charset="UTF-8" content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>headquarters-connector-modrinth</title>
-    <link href="../images/logo-icon.svg" rel="icon" type="image/svg">
-    <script>var pathToRoot = "../";</script>
-    <script>const storage = localStorage.getItem("dokka-dark-mode")
+<link href="../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
     if (storage == null) {
         const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
         if (osDarkSchemePreferred === true) {
@@ -13,33 +11,35 @@
         }
     } else {
         const savedDarkMode = JSON.parse(storage)
-        if (savedDarkMode === true) {
+        if(savedDarkMode === true) {
             document.getElementsByTagName("html")[0].classList.add("theme-dark")
         }
     }
     </script>
-    <script async src="../scripts/sourceset_dependencies.js" type="text/javascript"></script>
-    <link href="../styles/style.css" rel="Stylesheet">
-    <link href="../styles/jetbrains-mono.css" rel="Stylesheet">
-    <link href="../styles/main.css" rel="Stylesheet">
-    <link href="../styles/prism.css" rel="Stylesheet">
-    <link href="../styles/logo-styles.css" rel="Stylesheet">
-    <script async src="../scripts/clipboard.js" type="text/javascript"></script>
-    <script async src="../scripts/navigation-loader.js" type="text/javascript"></script>
-    <script async src="../scripts/platform-content-handler.js" type="text/javascript"></script>
-    <script defer src="../scripts/main.js" type="text/javascript"></script>
-    <script async src="../scripts/prism.js" type="text/javascript"></script>
-    <script defer src="../scripts/symbol-parameters-wrapper_deferred.js" type="text/javascript"></script>
-</head>
+<script type="text/javascript" src="../scripts/sourceset_dependencies.js" async></script>
+<link href="../styles/style.css" rel="Stylesheet">
+<link href="../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../styles/main.css" rel="Stylesheet">
+<link href="../styles/prism.css" rel="Stylesheet">
+<link href="../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../scripts/main.js" defer></script>
+<script type="text/javascript" src="../scripts/prism.js" async></script>
+<script type="text/javascript" src="../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
 <body>
 <div class="navigation-wrapper" id="navigation-wrapper">
     <div id="leftToggler"><span class="icon-toggler"></span></div>
     <div class="library-name">
-        <a href="../index.html">
-            <span>headquarters-connector</span> </a></div>
-    <div>
+<a href="../index.html">
+<span>headquarters-connector</span>            </a>    </div>
+    <div>1.4.2
     </div>
     <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":headquarters-connector-modrinth:dokkaHtmlPartial/main">jvm</button>
+        </div>
         <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
         <div id="searchBar"></div>
     </div>
@@ -49,216 +49,204 @@
         <div id="sideMenu"></div>
     </div>
     <div id="main">
-        <div class="main-content" id="content"
-             pageids="headquarters-connector-modrinth::////PointingToDeclaration//1406385035">
-            <div class="breadcrumbs"></div>
-            <div class="cover ">
-                <h1 class="cover"><span><span>headquarters-connector-modrinth</span></span></h1>
-                <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted">
-                    <div class="content sourceset-dependent-content" data-active=""
-                         data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main"><p class="paragraph">
-                        The modrinth http api client</p>
-                        <h3 class=""> Dependency</h3>
-                        <div class="sample-container">
-                            <pre><code class="block lang-kt" theme="idea">implementation("dev.nyon:headquarters-connector-modrinth:1.4.1")</code></pre>
-                            <span class="top-right-position"><span class="copy-icon"></span><div
-                                    class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <h2 class="">Packages</h2>
-            <div class="table"><a anchor-label="dev.nyon.headquarters.connector.modrinth"
-                                  data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
-                                  data-name="-1528486072%2FPackages%2F1406385035"
-                                  id="-1528486072%2FPackages%2F1406385035"></a>
-                <div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
-                     data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
-                    <div>
-                        <div class="main-subrow ">
-                            <div class=""><span class="inline-flex">
+<div class="main-content" id="content" pageids="headquarters-connector-modrinth::////PointingToDeclaration//1406385035">
+  <div class="breadcrumbs"></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>headquarters-connector-modrinth</span></span></h1>
+    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main"><p class="paragraph">The modrinth http api client</p><h3 class=""> Dependency</h3><div class="sample-container"><pre><code class="block lang-kt" theme="idea">implementation("dev.nyon:headquarters-connector-modrinth:1.4.2")</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+  <h2 class="">Packages</h2>
+  <div class="table"><a data-name="-1528486072%2FPackages%2F1406385035" anchor-label="dev.nyon.headquarters.connector.modrinth" id="-1528486072%2FPackages%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a>
+    <div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
               <div><a href="dev.nyon.headquarters.connector.modrinth/index.html">dev.nyon.headquarters.connector.modrinth</a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1528486072%2FPackages%2F1406385035"></span>
-                <div class="copy-popup-wrapper "><span
-                        class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-                            <div class="pull-right"></div>
-                        </div>
-                        <div><span class="brief-comment"><a anchor-label="dev.nyon.headquarters.connector.modrinth"
-                                                            data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
-                                                            data-name="-1528486072%2FPackages%2F1406385035"
-                                                            id="-1528486072%2FPackages%2F1406385035"></a>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div><span class="brief-comment"><a data-name="-1528486072%2FPackages%2F1406385035" anchor-label="dev.nyon.headquarters.connector.modrinth" id="-1528486072%2FPackages%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a>
             <p class="paragraph">Contains the <code class="lang-kotlin">ModrinthConnector</code></p>
           </span></div>
-                    </div>
-                </div>
-                <a anchor-label="dev.nyon.headquarters.connector.modrinth.models.project"
-                   data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
-                   data-name="16590655%2FPackages%2F1406385035"
-                   id="16590655%2FPackages%2F1406385035"></a>
-                <div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
-                     data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
-                    <div>
-                        <div class="main-subrow ">
-                            <div class=""><span class="inline-flex">
+      </div>
+    </div>
+<a data-name="16590655%2FPackages%2F1406385035" anchor-label="dev.nyon.headquarters.connector.modrinth.models.project" id="16590655%2FPackages%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a>
+    <div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
               <div><a href="dev.nyon.headquarters.connector.modrinth.models.project/index.html">dev.nyon.headquarters.connector.modrinth.models.project</a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="16590655%2FPackages%2F1406385035"></span>
-                <div class="copy-popup-wrapper "><span
-                        class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-                            <div class="pull-right"></div>
-                        </div>
-                        <div></div>
-                    </div>
-                </div>
-                <a anchor-label="dev.nyon.headquarters.connector.modrinth.models.project.team"
-                   data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
-                   data-name="1045319792%2FPackages%2F1406385035"
-                   id="1045319792%2FPackages%2F1406385035"></a>
-                <div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
-                     data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
-                    <div>
-                        <div class="main-subrow ">
-                            <div class=""><span class="inline-flex">
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="1045319792%2FPackages%2F1406385035" anchor-label="dev.nyon.headquarters.connector.modrinth.models.project.team" id="1045319792%2FPackages%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a>
+    <div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
               <div><a href="dev.nyon.headquarters.connector.modrinth.models.project.team/index.html">dev.nyon.headquarters.connector.modrinth.models.project.team</a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1045319792%2FPackages%2F1406385035"></span>
-                <div class="copy-popup-wrapper "><span
-                        class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-                            <div class="pull-right"></div>
-                        </div>
-                        <div></div>
-                    </div>
-                </div>
-                <a anchor-label="dev.nyon.headquarters.connector.modrinth.models.project.version"
-                   data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
-                   data-name="974190249%2FPackages%2F1406385035"
-                   id="974190249%2FPackages%2F1406385035"></a>
-                <div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
-                     data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
-                    <div>
-                        <div class="main-subrow ">
-                            <div class=""><span class="inline-flex">
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="974190249%2FPackages%2F1406385035" anchor-label="dev.nyon.headquarters.connector.modrinth.models.project.version" id="974190249%2FPackages%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a>
+    <div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
               <div><a href="dev.nyon.headquarters.connector.modrinth.models.project.version/index.html">dev.nyon.headquarters.connector.modrinth.models.project.version</a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="974190249%2FPackages%2F1406385035"></span>
-                <div class="copy-popup-wrapper "><span
-                        class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-                            <div class="pull-right"></div>
-                        </div>
-                        <div></div>
-                    </div>
-                </div>
-                <a anchor-label="dev.nyon.headquarters.connector.modrinth.models.request"
-                   data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
-                   data-name="1351010101%2FPackages%2F1406385035"
-                   id="1351010101%2FPackages%2F1406385035"></a>
-                <div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
-                     data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
-                    <div>
-                        <div class="main-subrow ">
-                            <div class=""><span class="inline-flex">
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="1351010101%2FPackages%2F1406385035" anchor-label="dev.nyon.headquarters.connector.modrinth.models.request" id="1351010101%2FPackages%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a>
+    <div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
               <div><a href="dev.nyon.headquarters.connector.modrinth.models.request/index.html">dev.nyon.headquarters.connector.modrinth.models.request</a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1351010101%2FPackages%2F1406385035"></span>
-                <div class="copy-popup-wrapper "><span
-                        class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-                            <div class="pull-right"></div>
-                        </div>
-                        <div></div>
-                    </div>
-                </div>
-                <a anchor-label="dev.nyon.headquarters.connector.modrinth.models.result"
-                   data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
-                   data-name="-1993751109%2FPackages%2F1406385035"
-                   id="-1993751109%2FPackages%2F1406385035"></a>
-                <div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
-                     data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
-                    <div>
-                        <div class="main-subrow ">
-                            <div class=""><span class="inline-flex">
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-1993751109%2FPackages%2F1406385035" anchor-label="dev.nyon.headquarters.connector.modrinth.models.result" id="-1993751109%2FPackages%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a>
+    <div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
               <div><a href="dev.nyon.headquarters.connector.modrinth.models.result/index.html">dev.nyon.headquarters.connector.modrinth.models.result</a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1993751109%2FPackages%2F1406385035"></span>
-                <div class="copy-popup-wrapper "><span
-                        class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-                            <div class="pull-right"></div>
-                        </div>
-                        <div></div>
-                    </div>
-                </div>
-                <a anchor-label="dev.nyon.headquarters.connector.modrinth.models.tags"
-                   data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
-                   data-name="153779639%2FPackages%2F1406385035"
-                   id="153779639%2FPackages%2F1406385035"></a>
-                <div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
-                     data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
-                    <div>
-                        <div class="main-subrow ">
-                            <div class=""><span class="inline-flex">
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="1347286337%2FPackages%2F1406385035" anchor-label="dev.nyon.headquarters.connector.modrinth.models.statistics" id="1347286337%2FPackages%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a>
+    <div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dev.nyon.headquarters.connector.modrinth.models.statistics/index.html">dev.nyon.headquarters.connector.modrinth.models.statistics</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1347286337%2FPackages%2F1406385035"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="153779639%2FPackages%2F1406385035" anchor-label="dev.nyon.headquarters.connector.modrinth.models.tags" id="153779639%2FPackages%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a>
+    <div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
               <div><a href="dev.nyon.headquarters.connector.modrinth.models.tags/index.html">dev.nyon.headquarters.connector.modrinth.models.tags</a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="153779639%2FPackages%2F1406385035"></span>
-                <div class="copy-popup-wrapper "><span
-                        class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-                            <div class="pull-right"></div>
-                        </div>
-                        <div></div>
-                    </div>
-                </div>
-                <a anchor-label="dev.nyon.headquarters.connector.modrinth.models.user"
-                   data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
-                   data-name="-696116503%2FPackages%2F1406385035"
-                   id="-696116503%2FPackages%2F1406385035"></a>
-                <div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
-                     data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
-                    <div>
-                        <div class="main-subrow ">
-                            <div class=""><span class="inline-flex">
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-696116503%2FPackages%2F1406385035" anchor-label="dev.nyon.headquarters.connector.modrinth.models.user" id="-696116503%2FPackages%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a>
+    <div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
               <div><a href="dev.nyon.headquarters.connector.modrinth.models.user/index.html">dev.nyon.headquarters.connector.modrinth.models.user</a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-696116503%2FPackages%2F1406385035"></span>
-                <div class="copy-popup-wrapper "><span
-                        class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-                            <div class="pull-right"></div>
-                        </div>
-                        <div></div>
-                    </div>
-                </div>
-                <a anchor-label="dev.nyon.headquarters.connector.modrinth.requests"
-                   data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
-                   data-name="-1958165330%2FPackages%2F1406385035"
-                   id="-1958165330%2FPackages%2F1406385035"></a>
-                <div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
-                     data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
-                    <div>
-                        <div class="main-subrow ">
-                            <div class=""><span class="inline-flex">
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-1958165330%2FPackages%2F1406385035" anchor-label="dev.nyon.headquarters.connector.modrinth.requests" id="-1958165330%2FPackages%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a>
+    <div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
               <div><a href="dev.nyon.headquarters.connector.modrinth.requests/index.html">dev.nyon.headquarters.connector.modrinth.requests</a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1958165330%2FPackages%2F1406385035"></span>
-                <div class="copy-popup-wrapper "><span
-                        class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-                            <div class="pull-right"></div>
-                        </div>
-                        <div><span class="brief-comment"><a anchor-label="dev.nyon.headquarters.connector.modrinth.requests"
-                                                            data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
-                                                            data-name="-1958165330%2FPackages%2F1406385035"
-                                                            id="-1958165330%2FPackages%2F1406385035"></a>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div><span class="brief-comment"><a data-name="-1958165330%2FPackages%2F1406385035" anchor-label="dev.nyon.headquarters.connector.modrinth.requests" id="-1958165330%2FPackages%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a>
             <p class="paragraph">Contains the request methods to the modrinth http api</p>
           </span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer">
-            <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span
-                class="pull-right"><span>Generated by </span><a
-                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
-        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
     </div>
 </div>
-
 </body>
 </html>
 
