@@ -2,6 +2,7 @@ package dev.nyon.headquarters.connector.modrinth.requests
 
 import dev.nyon.headquarters.connector.modrinth.ModrinthConnector
 import dev.nyon.headquarters.connector.modrinth.models.project.Project
+import dev.nyon.headquarters.connector.modrinth.models.project.ProjectValidity
 import dev.nyon.headquarters.connector.modrinth.models.request.Facet
 import dev.nyon.headquarters.connector.modrinth.models.request.Index
 import dev.nyon.headquarters.connector.modrinth.models.request.getEnumFieldAnnotation
@@ -72,6 +73,27 @@ suspend fun ModrinthConnector.getProject(query: String) = request<Project>("/pro
  */
 suspend fun ModrinthConnector.getProjects(ids: List<String>) =
     request<List<Project>>("/projects") { parameter("ids", ids.merge()) }
+
+/**
+ * Checks project for validity
+ * @see <a href="https://docs.modrinth.com/api-spec/#tag/projects/operation/checkProjectValidity">Modrinth docs</a>
+ *
+ * @param query The id or slug of the project
+ *
+ * @return The project's id in form of a [ProjectValidity] or null
+ */
+suspend fun ModrinthConnector.checkProjectValidity(query: String) = request<ProjectValidity>("/project/$query/check")
+
+/**
+ * Requests a list of random projects from modrinth
+ * @see <a href="https://docs.modrinth.com/api-spec/#tag/projects/operation/randomProjects">Modrinth docs</a>
+ *
+ * @param count The amount how many projects should be requested
+ *
+ * @return A [List] of random [Project]s
+ */
+suspend fun ModrinthConnector.getRandomProjects(count: Int = 20) =
+    request<List<Project>>("/projects_random") { parameter("count", count) }
 
 /**
  * Gets the dependencies of the project

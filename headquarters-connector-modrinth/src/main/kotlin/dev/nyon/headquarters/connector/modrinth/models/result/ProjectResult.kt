@@ -1,7 +1,7 @@
 package dev.nyon.headquarters.connector.modrinth.models.result
 
-import dev.nyon.headquarters.connector.modrinth.models.project.ProjectType
 import dev.nyon.headquarters.connector.modrinth.models.project.CompatibilityState
+import dev.nyon.headquarters.connector.modrinth.models.project.ProjectType
 import kotlinx.datetime.Instant
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

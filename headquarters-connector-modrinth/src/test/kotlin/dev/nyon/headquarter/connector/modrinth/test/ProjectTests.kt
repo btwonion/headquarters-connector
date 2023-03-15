@@ -15,14 +15,13 @@ class ProjectTests : CommonRequestTest({
     }
 
     test("searchProjects") {
-        val result = connector.searchProjects(
+        connector.searchProjects(
             "asdasddad asd a", facets = listOf(
                 Facet.ProjectType(listOf(ProjectType.Mod)), Facet.Version(
                     listOf(" awd as")
                 )
             ), limit = 1, index = Index.Downloads
         )
-        println(result.toString())
     }
 
     test("getProjects") {
@@ -37,6 +36,16 @@ class ProjectTests : CommonRequestTest({
 
     test("getUsersProjects") {
         val result = connector.getUsersProjects("btwonion")
+        result.shouldNotBeNull()
+    }
+
+    test("checkProjectValidity") {
+        val result = connector.checkProjectValidity("autodrop")
+        result.shouldNotBeNull()
+    }
+
+    test("getRandomProjects") {
+        val result = connector.getRandomProjects()
         result.shouldNotBeNull()
     }
 })
