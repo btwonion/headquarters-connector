@@ -1,9 +1,11 @@
 <!doctype html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <meta charset="UTF-8" content="width=device-width, initial-scale=1" name="viewport">
     <title>LauncherMeta</title>
-<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
     if (storage == null) {
         const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
         if (osDarkSchemePreferred === true) {
@@ -11,29 +13,30 @@
         }
     } else {
         const savedDarkMode = JSON.parse(storage)
-        if(savedDarkMode === true) {
+        if (savedDarkMode === true) {
             document.getElementsByTagName("html")[0].classList.add("theme-dark")
         }
     }
     </script>
-<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
-<link href="../../../styles/style.css" rel="Stylesheet">
-<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
-<link href="../../../styles/main.css" rel="Stylesheet">
-<link href="../../../styles/prism.css" rel="Stylesheet">
-<link href="../../../styles/logo-styles.css" rel="Stylesheet">
-<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
-<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
-<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
-<script type="text/javascript" src="../../../scripts/main.js" defer></script>
-<script type="text/javascript" src="../../../scripts/prism.js" async></script>
-<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+    <script async src="../../../scripts/sourceset_dependencies.js" type="text/javascript"></script>
+    <link href="../../../styles/style.css" rel="Stylesheet">
+    <link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+    <link href="../../../styles/main.css" rel="Stylesheet">
+    <link href="../../../styles/prism.css" rel="Stylesheet">
+    <link href="../../../styles/logo-styles.css" rel="Stylesheet">
+    <script async src="../../../scripts/clipboard.js" type="text/javascript"></script>
+    <script async src="../../../scripts/navigation-loader.js" type="text/javascript"></script>
+    <script async src="../../../scripts/platform-content-handler.js" type="text/javascript"></script>
+    <script defer src="../../../scripts/main.js" type="text/javascript"></script>
+    <script async src="../../../scripts/prism.js" type="text/javascript"></script>
+    <script defer src="../../../scripts/symbol-parameters-wrapper_deferred.js" type="text/javascript"></script>
+</head>
 <body>
 <div class="navigation-wrapper" id="navigation-wrapper">
     <div id="leftToggler"><span class="icon-toggler"></span></div>
     <div class="library-name">
-<a href="../../../index.html">
-<span>headquarters-connector</span>            </a>    </div>
+        <a href="../../../index.html">
+            <span>headquarters-connector</span> </a></div>
     <div>
     </div>
     <div class="pull-right d-flex">
@@ -46,87 +49,204 @@
         <div id="sideMenu"></div>
     </div>
     <div id="main">
-<div class="main-content" id="content" pageids="headquarters-connector-fabric::dev.nyon.headquarters.connector.fabric.models/LauncherMeta///PointingToDeclaration//-281189585">
-  <div class="breadcrumbs"><a href="../../index.html">headquarters-connector-fabric</a><span class="delimiter">/</span><a href="../index.html">dev.nyon.headquarters.connector.fabric.models</a><span class="delimiter">/</span><span class="current">LauncherMeta</span></div>
-  <div class="cover ">
-    <h1 class="cover"><span>Launcher</span><wbr><span><span>Meta</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":headquarters-connector-fabric:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">LauncherMeta</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>version<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>libraries<span class="token operator">: </span><a href="../-libraries/index.html">Libraries</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>mainClass<span class="token operator">: </span><a href="../-main-class/index.html">MainClass</a></span></span><span class="token punctuation">)</span> : <a href="../-i-launcher-meta/index.html">ILauncherMeta</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/btwonion/headquarters-connector/tree/master/headquarters-connector-fabric/src/main/kotlin/dev/nyon/headquarters/connector/fabric/models/LauncherMeta.kt#L13">source</a>)</span></span></div></div></div>
-  </div>
-  <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
-    <div class="tabs-section-body">
-      <h2 class="tabbedcontent">Constructors</h2>
-      <div class="table" data-togglable="Constructors"><a data-name="2098435363%2FConstructors%2F-281189585" anchor-label="LauncherMeta" id="2098435363%2FConstructors%2F-281189585" data-filterable-set=":headquarters-connector-fabric:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":headquarters-connector-fabric:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-fabric:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue TabbedContent">
-            <div class=""><span class="inline-flex">
+        <div class="main-content" id="content"
+             pageids="headquarters-connector-fabric::dev.nyon.headquarters.connector.fabric.models/LauncherMeta///PointingToDeclaration//-281189585">
+            <div class="breadcrumbs"><a href="../../index.html">headquarters-connector-fabric</a><span
+                    class="delimiter">/</span><a
+                    href="../index.html">dev.nyon.headquarters.connector.fabric.models</a><span
+                    class="delimiter">/</span><span class="current">LauncherMeta</span></div>
+            <div class="cover ">
+                <h1 class="cover"><span>Launcher</span>
+                    <wbr>
+                    <span><span>Meta</span></span></h1>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted">
+                    <div class="content sourceset-dependent-content" data-active=""
+                         data-togglable=":headquarters-connector-fabric:dokkaHtmlPartial/main">
+                        <div class="symbol monospace">
+                            <div class="block">
+                                <div class="block"><span class="token annotation builtin">@</span><span
+                                        data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span
+                                        class="token annotation builtin">Serializable</span></span></div>
+                            </div>
+                            <span class="token keyword">data </span><span class="token keyword">class </span><a
+                                href="index.html">LauncherMeta</a><span class="token punctuation">(</span><span
+                                class="parameters "><span class="parameter "><span class="token keyword">val </span>version<span
+                                class="token operator">: </span><a
+                                href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span
+                                class="token punctuation">, </span></span><span class="parameter "><span
+                                class="token keyword">val </span>libraries<span class="token operator">: </span><a
+                                href="../-libraries/index.html">Libraries</a><span
+                                class="token punctuation">, </span></span><span class="parameter "><span
+                                class="token keyword">val </span>mainClass<span class="token operator">: </span><a
+                                href="../-main-class/index.html">MainClass</a></span></span><span
+                                class="token punctuation">)</span> : <a href="../-i-launcher-meta/index.html">ILauncherMeta</a><span
+                                class="clearfix"><span class="floating-right">(<a
+                                href="https://github.com/btwonion/headquarters-connector/tree/master/headquarters-connector-fabric/src/main/kotlin/dev/nyon/headquarters/connector/fabric/models/LauncherMeta.kt#L13">source</a>)</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tabbedcontent">
+                <div class="tabs-section" tabs-section="tabs-section">
+                    <button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button>
+                    <button class="section-tab" data-togglable="Properties">Properties</button>
+                </div>
+                <div class="tabs-section-body">
+                    <h2 class="tabbedcontent">Constructors</h2>
+                    <div class="table" data-togglable="Constructors"><a
+                            anchor-label="LauncherMeta" data-filterable-set=":headquarters-connector-fabric:dokkaHtmlPartial/main"
+                            data-name="2098435363%2FConstructors%2F-281189585"
+                            id="2098435363%2FConstructors%2F-281189585"></a>
+                        <div class="table-row"
+                             data-filterable-current=":headquarters-connector-fabric:dokkaHtmlPartial/main"
+                             data-filterable-set=":headquarters-connector-fabric:dokkaHtmlPartial/main">
+                            <div class="main-subrow keyValue TabbedContent">
+                                <div class=""><span class="inline-flex">
                 <div><a href="-launcher-meta.html"><span>Launcher</span><wbr><span><span>Meta</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2098435363%2FConstructors%2F-281189585"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  <div class="copy-popup-wrapper "><span
+                          class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":headquarters-connector-fabric:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-launcher-meta.html"><span class="token function">LauncherMeta</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">version<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">libraries<span class="token operator">: </span><a href="../-libraries/index.html">Libraries</a><span class="token punctuation">, </span></span><span class="parameter ">mainClass<span class="token operator">: </span><a href="../-main-class/index.html">MainClass</a></span></span><span class="token punctuation">)</span></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <h2 class="">Properties</h2>
-      <div class="table" data-togglable="Properties"><a data-name="-384671819%2FProperties%2F-281189585" anchor-label="libraries" id="-384671819%2FProperties%2F-281189585" data-filterable-set=":headquarters-connector-fabric:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":headquarters-connector-fabric:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-fabric:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
+                                <div>
+                                    <div class="title">
+                                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted">
+                                            <div class="content sourceset-dependent-content" data-active=""
+                                                 data-togglable=":headquarters-connector-fabric:dokkaHtmlPartial/main">
+                                                <div class="symbol monospace"><span class="token keyword"></span><span
+                                                        class="token keyword">fun </span><a
+                                                        href="-launcher-meta.html"><span class="token function">LauncherMeta</span></a><span
+                                                        class="token punctuation">(</span><span
+                                                        class="parameters "><span class="parameter ">version<span
+                                                        class="token operator">: </span><a
+                                                        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span
+                                                        class="token punctuation">, </span></span><span
+                                                        class="parameter ">libraries<span
+                                                        class="token operator">: </span><a
+                                                        href="../-libraries/index.html">Libraries</a><span
+                                                        class="token punctuation">, </span></span><span
+                                                        class="parameter ">mainClass<span
+                                                        class="token operator">: </span><a
+                                                        href="../-main-class/index.html">MainClass</a></span></span><span
+                                                        class="token punctuation">)</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="">Properties</h2>
+                    <div class="table" data-togglable="Properties"><a anchor-label="libraries"
+                                                                      data-filterable-set=":headquarters-connector-fabric:dokkaHtmlPartial/main"
+                                                                      data-name="-384671819%2FProperties%2F-281189585"
+                                                                      id="-384671819%2FProperties%2F-281189585"></a>
+                        <div class="table-row"
+                             data-filterable-current=":headquarters-connector-fabric:dokkaHtmlPartial/main"
+                             data-filterable-set=":headquarters-connector-fabric:dokkaHtmlPartial/main">
+                            <div class="main-subrow keyValue ">
+                                <div class=""><span class="inline-flex">
                 <div><a href="libraries.html"><span><span>libraries</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-384671819%2FProperties%2F-281189585"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  <div class="copy-popup-wrapper "><span
+                          class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":headquarters-connector-fabric:dokkaHtmlPartial/main"><a data-name="-384671819%2FProperties%2F-281189585" anchor-label="libraries" id="-384671819%2FProperties%2F-281189585" data-filterable-set=":headquarters-connector-fabric:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="libraries.html">libraries</a><span class="token operator">: </span><a href="../-libraries/index.html">Libraries</a></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="753801679%2FProperties%2F-281189585" anchor-label="mainClass" id="753801679%2FProperties%2F-281189585" data-filterable-set=":headquarters-connector-fabric:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":headquarters-connector-fabric:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-fabric:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
+                                <div>
+                                    <div class="title">
+                                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"
+                                             data-togglable="Properties">
+                                            <div class="content sourceset-dependent-content" data-active=""
+                                                 data-togglable=":headquarters-connector-fabric:dokkaHtmlPartial/main">
+                                                <a anchor-label="libraries"
+                                                   data-filterable-set=":headquarters-connector-fabric:dokkaHtmlPartial/main" data-name="-384671819%2FProperties%2F-281189585"
+                                                   id="-384671819%2FProperties%2F-281189585"></a>
+                                                <div class="symbol monospace"><span class="token keyword"></span><span
+                                                        class="token keyword">val </span><a href="libraries.html">libraries</a><span
+                                                        class="token operator">: </span><a
+                                                        href="../-libraries/index.html">Libraries</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a anchor-label="mainClass" data-filterable-set=":headquarters-connector-fabric:dokkaHtmlPartial/main"
+                           data-name="753801679%2FProperties%2F-281189585"
+                           id="753801679%2FProperties%2F-281189585"></a>
+                        <div class="table-row"
+                             data-filterable-current=":headquarters-connector-fabric:dokkaHtmlPartial/main"
+                             data-filterable-set=":headquarters-connector-fabric:dokkaHtmlPartial/main">
+                            <div class="main-subrow keyValue ">
+                                <div class=""><span class="inline-flex">
                 <div><a href="main-class.html"><span>main</span><wbr><span><span>Class</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="753801679%2FProperties%2F-281189585"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  <div class="copy-popup-wrapper "><span
+                          class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":headquarters-connector-fabric:dokkaHtmlPartial/main"><a data-name="753801679%2FProperties%2F-281189585" anchor-label="mainClass" id="753801679%2FProperties%2F-281189585" data-filterable-set=":headquarters-connector-fabric:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="main-class.html">mainClass</a><span class="token operator">: </span><a href="../-main-class/index.html">MainClass</a></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="141365910%2FProperties%2F-281189585" anchor-label="version" id="141365910%2FProperties%2F-281189585" data-filterable-set=":headquarters-connector-fabric:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":headquarters-connector-fabric:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-fabric:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
+                                <div>
+                                    <div class="title">
+                                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"
+                                             data-togglable="Properties">
+                                            <div class="content sourceset-dependent-content" data-active=""
+                                                 data-togglable=":headquarters-connector-fabric:dokkaHtmlPartial/main">
+                                                <a anchor-label="mainClass"
+                                                   data-filterable-set=":headquarters-connector-fabric:dokkaHtmlPartial/main" data-name="753801679%2FProperties%2F-281189585"
+                                                   id="753801679%2FProperties%2F-281189585"></a>
+                                                <div class="symbol monospace"><span class="token keyword"></span><span
+                                                        class="token keyword">val </span><a href="main-class.html">mainClass</a><span
+                                                        class="token operator">: </span><a
+                                                        href="../-main-class/index.html">MainClass</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a anchor-label="version" data-filterable-set=":headquarters-connector-fabric:dokkaHtmlPartial/main"
+                           data-name="141365910%2FProperties%2F-281189585"
+                           id="141365910%2FProperties%2F-281189585"></a>
+                        <div class="table-row"
+                             data-filterable-current=":headquarters-connector-fabric:dokkaHtmlPartial/main"
+                             data-filterable-set=":headquarters-connector-fabric:dokkaHtmlPartial/main">
+                            <div class="main-subrow keyValue ">
+                                <div class=""><span class="inline-flex">
                 <div><a href="version.html"><span><span>version</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="141365910%2FProperties%2F-281189585"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  <div class="copy-popup-wrapper "><span
+                          class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":headquarters-connector-fabric:dokkaHtmlPartial/main"><a data-name="141365910%2FProperties%2F-281189585" anchor-label="version" id="141365910%2FProperties%2F-281189585" data-filterable-set=":headquarters-connector-fabric:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="version.html">version</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
-              </div>
+                                <div>
+                                    <div class="title">
+                                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"
+                                             data-togglable="Properties">
+                                            <div class="content sourceset-dependent-content" data-active=""
+                                                 data-togglable=":headquarters-connector-fabric:dokkaHtmlPartial/main">
+                                                <a anchor-label="version"
+                                                   data-filterable-set=":headquarters-connector-fabric:dokkaHtmlPartial/main" data-name="141365910%2FProperties%2F-281189585"
+                                                   id="141365910%2FProperties%2F-281189585"></a>
+                                                <div class="symbol monospace"><span class="token keyword"></span><span
+                                                        class="token keyword">val </span><a
+                                                        href="version.html">version</a><span
+                                                        class="token operator">: </span><a
+                                                        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-      <div class="footer">
-        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
-      </div>
+        <div class="footer">
+            <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+        </div>
     </div>
 </div>
 
-</body></html>
+</body>
+</html>
 

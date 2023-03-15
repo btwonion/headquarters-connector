@@ -19,10 +19,13 @@ suspend fun FabricConnector.getIntermediariesOfGameVersion(version: String) =
 suspend fun FabricConnector.getLoaderVersions() = request<List<Loader>>("/versions/loader")
 suspend fun FabricConnector.getLoadersOfGameVersion(version: String) =
     request<List<CompatibleLoader>>("/versions/loader/$version")
+
 suspend fun FabricConnector.getLoaderOfGameAndLoaderVersion(gameVersion: String, loaderVersion: String) =
     request<CompatibleLoader>("/versions/loader/$gameVersion/$loaderVersion")
+
 suspend fun FabricConnector.getLoaderProfile(loaderVersion: String, gameVersion: String) =
     request<LoaderProfile>("/versions/loader/$gameVersion/$loaderVersion/profile/json")
+
 suspend fun FabricConnector.getServerLoaderProfile(loaderVersion: String, gameVersion: String) =
     request<LoaderProfile>("/versions/loader/$gameVersion/$loaderVersion/server/json")
 

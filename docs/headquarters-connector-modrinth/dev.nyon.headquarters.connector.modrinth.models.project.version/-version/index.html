@@ -1,9 +1,11 @@
 <!doctype html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <meta charset="UTF-8" content="width=device-width, initial-scale=1" name="viewport">
     <title>Version</title>
-<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
     if (storage == null) {
         const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
         if (osDarkSchemePreferred === true) {
@@ -11,29 +13,30 @@
         }
     } else {
         const savedDarkMode = JSON.parse(storage)
-        if(savedDarkMode === true) {
+        if (savedDarkMode === true) {
             document.getElementsByTagName("html")[0].classList.add("theme-dark")
         }
     }
     </script>
-<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
-<link href="../../../styles/style.css" rel="Stylesheet">
-<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
-<link href="../../../styles/main.css" rel="Stylesheet">
-<link href="../../../styles/prism.css" rel="Stylesheet">
-<link href="../../../styles/logo-styles.css" rel="Stylesheet">
-<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
-<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
-<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
-<script type="text/javascript" src="../../../scripts/main.js" defer></script>
-<script type="text/javascript" src="../../../scripts/prism.js" async></script>
-<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+    <script async src="../../../scripts/sourceset_dependencies.js" type="text/javascript"></script>
+    <link href="../../../styles/style.css" rel="Stylesheet">
+    <link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+    <link href="../../../styles/main.css" rel="Stylesheet">
+    <link href="../../../styles/prism.css" rel="Stylesheet">
+    <link href="../../../styles/logo-styles.css" rel="Stylesheet">
+    <script async src="../../../scripts/clipboard.js" type="text/javascript"></script>
+    <script async src="../../../scripts/navigation-loader.js" type="text/javascript"></script>
+    <script async src="../../../scripts/platform-content-handler.js" type="text/javascript"></script>
+    <script defer src="../../../scripts/main.js" type="text/javascript"></script>
+    <script async src="../../../scripts/prism.js" type="text/javascript"></script>
+    <script defer src="../../../scripts/symbol-parameters-wrapper_deferred.js" type="text/javascript"></script>
+</head>
 <body>
 <div class="navigation-wrapper" id="navigation-wrapper">
     <div id="leftToggler"><span class="icon-toggler"></span></div>
     <div class="library-name">
-<a href="../../../index.html">
-<span>headquarters-connector</span>            </a>    </div>
+        <a href="../../../index.html">
+            <span>headquarters-connector</span> </a></div>
     <div>
     </div>
     <div class="pull-right d-flex">
@@ -46,260 +49,921 @@
         <div id="sideMenu"></div>
     </div>
     <div id="main">
-<div class="main-content" id="content" pageids="headquarters-connector-modrinth::dev.nyon.headquarters.connector.modrinth.models.project.version/Version///PointingToDeclaration//1406385035">
-  <div class="breadcrumbs"><a href="../../index.html">headquarters-connector-modrinth</a><span class="delimiter">/</span><a href="../index.html">dev.nyon.headquarters.connector.modrinth.models.project.version</a><span class="delimiter">/</span><span class="current">Version</span></div>
-  <div class="cover ">
-    <h1 class="cover"><span><span>Version</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">Version</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>versionNumber<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>changelog<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>dependencies<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../dev.nyon.headquarters.connector.modrinth.models.project/-dependency/index.html">Dependency</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gameVersions<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>versionType<span class="token operator">: </span><a href="../-version-type/index.html">VersionType</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>loaders<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-loader/index.html">Loader</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>featured<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>id<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>projectID<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>authorID<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>published<span class="token operator">: </span><span data-unresolved-link="kotlinx.datetime/Instant///PointingToDeclaration/">Instant</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>downloads<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>files<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-file/index.html">File</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/btwonion/headquarters-connector/tree/master/headquarters-connector-modrinth/src/main/kotlin/dev/nyon/headquarters/connector/modrinth/models/project/version/Version.kt#L8">source</a>)</span></span></div><p class="paragraph">The version model of Modrinth</p></div></div>
-  </div>
-  <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Parameters">Parameters</button><button class="section-tab" data-togglable="See also">See also</button></div>
-    <div class="tabs-section-body">
-      <h4 class="">See also</h4>
-      <div data-togglable="See also">
-        <div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="See also"><div class="content sourceset-dependent-content" data-active="" data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main"><div data-togglable="See also"><div class="table" data-togglable="See also"><div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div></div></span></div><div><div class="title"><div data-togglable="See also"><p class="paragraph"><a href="https://docs.modrinth.com/api-spec/#tag/version_model">Modrinth docs</a></p></div></div></div></div></div></div></div></div></div>
-      </div>
-      <h4 class="">Parameters</h4>
-      <div data-togglable="Parameters">
-        <div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="Parameters"><div class="content sourceset-dependent-content" data-active="" data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main"><div data-togglable="Parameters"><div class="table" data-togglable="Parameters"><div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>name</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">The version's name</p></div></div></div></div></div><div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>version</span><wbr><span><span>Number</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">The version's version number</p></div></div></div></div></div><div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>changelog</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">The changelog of this version (optional)</p></div></div></div></div></div><div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>dependencies</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">The dependencies of the version</p></div></div></div></div></div><div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>game</span><wbr><span><span>Versions</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">The supported game versions of this version</p></div></div></div></div></div><div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>version</span><wbr><span><span>Type</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">The <a href="../-version-type/index.html">VersionType</a> of this version</p></div></div></div></div></div><div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>loaders</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">The supported loaders of this version</p></div></div></div></div></div><div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>featured</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">True if the version is featured by the project</p></div></div></div></div></div><div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>id</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">The version's id</p></div></div></div></div></div><div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>project</span><wbr><span><span>ID</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">The id of the project</p></div></div></div></div></div><div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>author</span><wbr><span><span>ID</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">The author's id</p></div></div></div></div></div><div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>published</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">The publishing date of this version</p></div></div></div></div></div><div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>downloads</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">The download count of this version</p></div></div></div></div></div><div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>files</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">The files of the version</p></div></div></div></div></div></div></div></div></div>
-      </div>
-      <h2 class="tabbedcontent">Constructors</h2>
-      <div class="table" data-togglable="Constructors"><a data-name="610273583%2FConstructors%2F1406385035" anchor-label="Version" id="610273583%2FConstructors%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue TabbedContent">
-            <div class=""><span class="inline-flex">
+        <div class="main-content" id="content"
+             pageids="headquarters-connector-modrinth::dev.nyon.headquarters.connector.modrinth.models.project.version/Version///PointingToDeclaration//1406385035">
+            <div class="breadcrumbs"><a href="../../index.html">headquarters-connector-modrinth</a><span
+                    class="delimiter">/</span><a href="../index.html">dev.nyon.headquarters.connector.modrinth.models.project.version</a><span
+                    class="delimiter">/</span><span class="current">Version</span></div>
+            <div class="cover ">
+                <h1 class="cover"><span><span>Version</span></span></h1>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted">
+                    <div class="content sourceset-dependent-content" data-active=""
+                         data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                        <div class="symbol monospace">
+                            <div class="block">
+                                <div class="block"><span class="token annotation builtin">@</span><span
+                                        data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span
+                                        class="token annotation builtin">Serializable</span></span></div>
+                            </div>
+                            <span class="token keyword">data </span><span class="token keyword">class </span><a
+                                href="index.html">Version</a><span class="token punctuation">(</span><span
+                                class="parameters "><span class="parameter "><span class="token keyword">val </span>name<span
+                                class="token operator">: </span><a
+                                href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span
+                                class="token punctuation">, </span></span><span class="parameter "><span
+                                class="token keyword">val </span>versionNumber<span class="token operator">: </span><a
+                                href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span
+                                class="token punctuation">, </span></span><span class="parameter "><span
+                                class="token keyword">val </span>changelog<span class="token operator">: </span><a
+                                href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span
+                                class="token operator">?</span><span class="token punctuation">, </span></span><span
+                                class="parameter "><span class="token keyword">val </span>dependencies<span
+                                class="token operator">: </span><a
+                                href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span
+                                class="token operator">&lt;</span><span class="token keyword"></span><a
+                                href="../../dev.nyon.headquarters.connector.modrinth.models.project/-dependency/index.html">Dependency</a><span
+                                class="token operator">&gt;</span><span class="token operator">?</span><span
+                                class="token punctuation">, </span></span><span class="parameter "><span
+                                class="token keyword">val </span>gameVersions<span class="token operator">: </span><a
+                                href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span
+                                class="token operator">&lt;</span><span class="token keyword"></span><a
+                                href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span
+                                class="token operator">&gt;</span><span class="token punctuation">, </span></span><span
+                                class="parameter "><span class="token keyword">val </span>versionType<span
+                                class="token operator">: </span><a
+                                href="../-version-type/index.html">VersionType</a><span
+                                class="token punctuation">, </span></span><span class="parameter "><span
+                                class="token keyword">val </span>loaders<span class="token operator">: </span><a
+                                href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span
+                                class="token operator">&lt;</span><span class="token keyword"></span><a
+                                href="../-loader/index.html">Loader</a><span class="token operator">&gt;</span><span
+                                class="token punctuation">, </span></span><span class="parameter "><span
+                                class="token keyword">val </span>featured<span class="token operator">: </span><a
+                                href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span
+                                class="token punctuation">, </span></span><span class="parameter "><span
+                                class="token keyword">val </span>id<span class="token operator">: </span><a
+                                href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span
+                                class="token punctuation">, </span></span><span class="parameter "><span
+                                class="token keyword">val </span>projectID<span class="token operator">: </span><a
+                                href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span
+                                class="token punctuation">, </span></span><span class="parameter "><span
+                                class="token keyword">val </span>authorID<span class="token operator">: </span><a
+                                href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span
+                                class="token punctuation">, </span></span><span class="parameter "><span
+                                class="token keyword">val </span>published<span class="token operator">: </span><span
+                                data-unresolved-link="kotlinx.datetime/Instant///PointingToDeclaration/">Instant</span><span
+                                class="token punctuation">, </span></span><span class="parameter "><span
+                                class="token keyword">val </span>downloads<span class="token operator">: </span><a
+                                href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span
+                                class="token punctuation">, </span></span><span class="parameter "><span
+                                class="token keyword">val </span>files<span class="token operator">: </span><a
+                                href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span
+                                class="token operator">&lt;</span><span class="token keyword"></span><a
+                                href="../-file/index.html">File</a><span
+                                class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span
+                                class="clearfix"><span class="floating-right">(<a
+                                href="https://github.com/btwonion/headquarters-connector/tree/master/headquarters-connector-modrinth/src/main/kotlin/dev/nyon/headquarters/connector/modrinth/models/project/version/Version.kt#L8">source</a>)</span></span>
+                        </div>
+                        <p class="paragraph">The version model of Modrinth</p></div>
+                </div>
+            </div>
+            <div class="tabbedcontent">
+                <div class="tabs-section" tabs-section="tabs-section">
+                    <button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button>
+                    <button class="section-tab" data-togglable="Properties">Properties</button>
+                    <button class="section-tab" data-togglable="Parameters">Parameters</button>
+                    <button class="section-tab" data-togglable="See also">See also</button>
+                </div>
+                <div class="tabs-section-body">
+                    <h4 class="">See also</h4>
+                    <div data-togglable="See also">
+                        <div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted"
+                             data-togglable="See also">
+                            <div class="content sourceset-dependent-content" data-active=""
+                                 data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                                <div data-togglable="See also">
+                                    <div class="table" data-togglable="See also">
+                                        <div class="table-row"
+                                             data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                                             data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                                            <div class="main-subrow keyValue WithExtraAttributes">
+                                                <div class=""><span class="inline-flex"><div></div></span></div>
+                                                <div>
+                                                    <div class="title">
+                                                        <div data-togglable="See also"><p class="paragraph"><a
+                                                                href="https://docs.modrinth.com/api-spec/#tag/version_model">Modrinth
+                                                            docs</a></p></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="">Parameters</h4>
+                    <div data-togglable="Parameters">
+                        <div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted"
+                             data-togglable="Parameters">
+                            <div class="content sourceset-dependent-content" data-active=""
+                                 data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                                <div data-togglable="Parameters">
+                                    <div class="table" data-togglable="Parameters">
+                                        <div class="table-row"
+                                             data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                                             data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                                            <div class="main-subrow keyValue WithExtraAttributes">
+                                                <div class=""><span class="inline-flex"><div><u><span><span>name</span></span></u></div></span>
+                                                </div>
+                                                <div>
+                                                    <div class="title">
+                                                        <div data-togglable="Parameters"><p class="paragraph">The
+                                                            version's name</p></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-row"
+                                             data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                                             data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                                            <div class="main-subrow keyValue WithExtraAttributes">
+                                                <div class=""><span class="inline-flex"><div><u><span>version</span><wbr><span><span>Number</span></span></u></div></span>
+                                                </div>
+                                                <div>
+                                                    <div class="title">
+                                                        <div data-togglable="Parameters"><p class="paragraph">The
+                                                            version's version number</p></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-row"
+                                             data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                                             data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                                            <div class="main-subrow keyValue WithExtraAttributes">
+                                                <div class=""><span class="inline-flex"><div><u><span><span>changelog</span></span></u></div></span>
+                                                </div>
+                                                <div>
+                                                    <div class="title">
+                                                        <div data-togglable="Parameters"><p class="paragraph">The
+                                                            changelog of this version (optional)</p></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-row"
+                                             data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                                             data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                                            <div class="main-subrow keyValue WithExtraAttributes">
+                                                <div class=""><span class="inline-flex"><div><u><span><span>dependencies</span></span></u></div></span>
+                                                </div>
+                                                <div>
+                                                    <div class="title">
+                                                        <div data-togglable="Parameters"><p class="paragraph">The
+                                                            dependencies of the version</p></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-row"
+                                             data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                                             data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                                            <div class="main-subrow keyValue WithExtraAttributes">
+                                                <div class=""><span class="inline-flex"><div><u><span>game</span><wbr><span><span>Versions</span></span></u></div></span>
+                                                </div>
+                                                <div>
+                                                    <div class="title">
+                                                        <div data-togglable="Parameters"><p class="paragraph">The
+                                                            supported game versions of this version</p></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-row"
+                                             data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                                             data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                                            <div class="main-subrow keyValue WithExtraAttributes">
+                                                <div class=""><span class="inline-flex"><div><u><span>version</span><wbr><span><span>Type</span></span></u></div></span>
+                                                </div>
+                                                <div>
+                                                    <div class="title">
+                                                        <div data-togglable="Parameters"><p class="paragraph">The <a
+                                                                href="../-version-type/index.html">VersionType</a> of
+                                                            this version</p></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-row"
+                                             data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                                             data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                                            <div class="main-subrow keyValue WithExtraAttributes">
+                                                <div class=""><span class="inline-flex"><div><u><span><span>loaders</span></span></u></div></span>
+                                                </div>
+                                                <div>
+                                                    <div class="title">
+                                                        <div data-togglable="Parameters"><p class="paragraph">The
+                                                            supported loaders of this version</p></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-row"
+                                             data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                                             data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                                            <div class="main-subrow keyValue WithExtraAttributes">
+                                                <div class=""><span class="inline-flex"><div><u><span><span>featured</span></span></u></div></span>
+                                                </div>
+                                                <div>
+                                                    <div class="title">
+                                                        <div data-togglable="Parameters"><p class="paragraph">True if
+                                                            the version is featured by the project</p></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-row"
+                                             data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                                             data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                                            <div class="main-subrow keyValue WithExtraAttributes">
+                                                <div class=""><span class="inline-flex"><div><u><span><span>id</span></span></u></div></span>
+                                                </div>
+                                                <div>
+                                                    <div class="title">
+                                                        <div data-togglable="Parameters"><p class="paragraph">The
+                                                            version's id</p></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-row"
+                                             data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                                             data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                                            <div class="main-subrow keyValue WithExtraAttributes">
+                                                <div class=""><span class="inline-flex"><div><u><span>project</span><wbr><span><span>ID</span></span></u></div></span>
+                                                </div>
+                                                <div>
+                                                    <div class="title">
+                                                        <div data-togglable="Parameters"><p class="paragraph">The id of
+                                                            the project</p></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-row"
+                                             data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                                             data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                                            <div class="main-subrow keyValue WithExtraAttributes">
+                                                <div class=""><span class="inline-flex"><div><u><span>author</span><wbr><span><span>ID</span></span></u></div></span>
+                                                </div>
+                                                <div>
+                                                    <div class="title">
+                                                        <div data-togglable="Parameters"><p class="paragraph">The
+                                                            author's id</p></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-row"
+                                             data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                                             data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                                            <div class="main-subrow keyValue WithExtraAttributes">
+                                                <div class=""><span class="inline-flex"><div><u><span><span>published</span></span></u></div></span>
+                                                </div>
+                                                <div>
+                                                    <div class="title">
+                                                        <div data-togglable="Parameters"><p class="paragraph">The
+                                                            publishing date of this version</p></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-row"
+                                             data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                                             data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                                            <div class="main-subrow keyValue WithExtraAttributes">
+                                                <div class=""><span class="inline-flex"><div><u><span><span>downloads</span></span></u></div></span>
+                                                </div>
+                                                <div>
+                                                    <div class="title">
+                                                        <div data-togglable="Parameters"><p class="paragraph">The
+                                                            download count of this version</p></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-row"
+                                             data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                                             data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                                            <div class="main-subrow keyValue WithExtraAttributes">
+                                                <div class=""><span class="inline-flex"><div><u><span><span>files</span></span></u></div></span>
+                                                </div>
+                                                <div>
+                                                    <div class="title">
+                                                        <div data-togglable="Parameters"><p class="paragraph">The files
+                                                            of the version</p></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="tabbedcontent">Constructors</h2>
+                    <div class="table" data-togglable="Constructors"><a
+                            anchor-label="Version" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                            data-name="610273583%2FConstructors%2F1406385035"
+                            id="610273583%2FConstructors%2F1406385035"></a>
+                        <div class="table-row"
+                             data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                             data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                            <div class="main-subrow keyValue TabbedContent">
+                                <div class=""><span class="inline-flex">
                 <div><a href="-version.html"><span><span>Version</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="610273583%2FConstructors%2F1406385035"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  <div class="copy-popup-wrapper "><span
+                          class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-version.html"><span class="token function">Version</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">versionNumber<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">changelog<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">dependencies<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../dev.nyon.headquarters.connector.modrinth.models.project/-dependency/index.html">Dependency</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">gameVersions<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">versionType<span class="token operator">: </span><a href="../-version-type/index.html">VersionType</a><span class="token punctuation">, </span></span><span class="parameter ">loaders<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-loader/index.html">Loader</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">featured<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter ">id<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">projectID<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">authorID<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">published<span class="token operator">: </span><span data-unresolved-link="kotlinx.datetime/Instant///PointingToDeclaration/">Instant</span><span class="token punctuation">, </span></span><span class="parameter ">downloads<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">files<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-file/index.html">File</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <h2 class="">Properties</h2>
-      <div class="table" data-togglable="Properties"><a data-name="-1178929288%2FProperties%2F1406385035" anchor-label="authorID" id="-1178929288%2FProperties%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
+                                <div>
+                                    <div class="title">
+                                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted">
+                                            <div class="content sourceset-dependent-content" data-active=""
+                                                 data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                                                <div class="symbol monospace"><span class="token keyword"></span><span
+                                                        class="token keyword">fun </span><a href="-version.html"><span
+                                                        class="token function">Version</span></a><span
+                                                        class="token punctuation">(</span><span
+                                                        class="parameters "><span class="parameter ">name<span
+                                                        class="token operator">: </span><a
+                                                        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span
+                                                        class="token punctuation">, </span></span><span
+                                                        class="parameter ">versionNumber<span
+                                                        class="token operator">: </span><a
+                                                        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span
+                                                        class="token punctuation">, </span></span><span
+                                                        class="parameter ">changelog<span
+                                                        class="token operator">: </span><a
+                                                        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span
+                                                        class="token operator">?</span><span
+                                                        class="token punctuation">, </span></span><span
+                                                        class="parameter ">dependencies<span
+                                                        class="token operator">: </span><a
+                                                        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span
+                                                        class="token operator">&lt;</span><span
+                                                        class="token keyword"></span><a
+                                                        href="../../dev.nyon.headquarters.connector.modrinth.models.project/-dependency/index.html">Dependency</a><span
+                                                        class="token operator">&gt;</span><span
+                                                        class="token operator">?</span><span
+                                                        class="token punctuation">, </span></span><span
+                                                        class="parameter ">gameVersions<span
+                                                        class="token operator">: </span><a
+                                                        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span
+                                                        class="token operator">&lt;</span><span
+                                                        class="token keyword"></span><a
+                                                        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span
+                                                        class="token operator">&gt;</span><span
+                                                        class="token punctuation">, </span></span><span
+                                                        class="parameter ">versionType<span
+                                                        class="token operator">: </span><a
+                                                        href="../-version-type/index.html">VersionType</a><span
+                                                        class="token punctuation">, </span></span><span
+                                                        class="parameter ">loaders<span class="token operator">: </span><a
+                                                        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span
+                                                        class="token operator">&lt;</span><span
+                                                        class="token keyword"></span><a href="../-loader/index.html">Loader</a><span
+                                                        class="token operator">&gt;</span><span
+                                                        class="token punctuation">, </span></span><span
+                                                        class="parameter ">featured<span
+                                                        class="token operator">: </span><a
+                                                        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span
+                                                        class="token punctuation">, </span></span><span
+                                                        class="parameter ">id<span class="token operator">: </span><a
+                                                        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span
+                                                        class="token punctuation">, </span></span><span
+                                                        class="parameter ">projectID<span
+                                                        class="token operator">: </span><a
+                                                        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span
+                                                        class="token punctuation">, </span></span><span
+                                                        class="parameter ">authorID<span
+                                                        class="token operator">: </span><a
+                                                        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span
+                                                        class="token punctuation">, </span></span><span
+                                                        class="parameter ">published<span
+                                                        class="token operator">: </span><span
+                                                        data-unresolved-link="kotlinx.datetime/Instant///PointingToDeclaration/">Instant</span><span
+                                                        class="token punctuation">, </span></span><span
+                                                        class="parameter ">downloads<span
+                                                        class="token operator">: </span><a
+                                                        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span
+                                                        class="token punctuation">, </span></span><span
+                                                        class="parameter ">files<span class="token operator">: </span><a
+                                                        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span
+                                                        class="token operator">&lt;</span><span
+                                                        class="token keyword"></span><a
+                                                        href="../-file/index.html">File</a><span class="token operator">&gt;</span></span></span><span
+                                                        class="token punctuation">)</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="">Properties</h2>
+                    <div class="table" data-togglable="Properties"><a anchor-label="authorID"
+                                                                      data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                                                                      data-name="-1178929288%2FProperties%2F1406385035"
+                                                                      id="-1178929288%2FProperties%2F1406385035"></a>
+                        <div class="table-row"
+                             data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                             data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                            <div class="main-subrow keyValue ">
+                                <div class=""><span class="inline-flex">
                 <div><a href="author-i-d.html"><span>author</span><wbr><span><span>ID</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1178929288%2FProperties%2F1406385035"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  <div class="copy-popup-wrapper "><span
+                          class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main"><a data-name="-1178929288%2FProperties%2F1406385035" anchor-label="authorID" id="-1178929288%2FProperties%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="author-i-d.html">authorID</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="-1414003736%2FProperties%2F1406385035" anchor-label="changelog" id="-1414003736%2FProperties%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
+                                <div>
+                                    <div class="title">
+                                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"
+                                             data-togglable="Properties">
+                                            <div class="content sourceset-dependent-content" data-active=""
+                                                 data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                                                <a anchor-label="authorID"
+                                                   data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-name="-1178929288%2FProperties%2F1406385035"
+                                                   id="-1178929288%2FProperties%2F1406385035"></a>
+                                                <div class="symbol monospace"><span class="token keyword"></span><span
+                                                        class="token keyword">val </span><a href="author-i-d.html">authorID</a><span
+                                                        class="token operator">: </span><a
+                                                        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a anchor-label="changelog" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                           data-name="-1414003736%2FProperties%2F1406385035"
+                           id="-1414003736%2FProperties%2F1406385035"></a>
+                        <div class="table-row"
+                             data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                             data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                            <div class="main-subrow keyValue ">
+                                <div class=""><span class="inline-flex">
                 <div><a href="changelog.html"><span><span>changelog</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1414003736%2FProperties%2F1406385035"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  <div class="copy-popup-wrapper "><span
+                          class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main"><a data-name="-1414003736%2FProperties%2F1406385035" anchor-label="changelog" id="-1414003736%2FProperties%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="changelog.html">changelog</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="-151881963%2FProperties%2F1406385035" anchor-label="dependencies" id="-151881963%2FProperties%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
+                                <div>
+                                    <div class="title">
+                                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"
+                                             data-togglable="Properties">
+                                            <div class="content sourceset-dependent-content" data-active=""
+                                                 data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                                                <a anchor-label="changelog"
+                                                   data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-name="-1414003736%2FProperties%2F1406385035"
+                                                   id="-1414003736%2FProperties%2F1406385035"></a>
+                                                <div class="symbol monospace"><span class="token keyword"></span><span
+                                                        class="token keyword">val </span><a href="changelog.html">changelog</a><span
+                                                        class="token operator">: </span><a
+                                                        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span
+                                                        class="token operator">?</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a anchor-label="dependencies" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                           data-name="-151881963%2FProperties%2F1406385035"
+                           id="-151881963%2FProperties%2F1406385035"></a>
+                        <div class="table-row"
+                             data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                             data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                            <div class="main-subrow keyValue ">
+                                <div class=""><span class="inline-flex">
                 <div><a href="dependencies.html"><span><span>dependencies</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-151881963%2FProperties%2F1406385035"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  <div class="copy-popup-wrapper "><span
+                          class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main"><a data-name="-151881963%2FProperties%2F1406385035" anchor-label="dependencies" id="-151881963%2FProperties%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="dependencies.html">dependencies</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../dev.nyon.headquarters.connector.modrinth.models.project/-dependency/index.html">Dependency</a><span class="token operator">&gt;</span><span class="token operator">?</span></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="-182809487%2FProperties%2F1406385035" anchor-label="downloads" id="-182809487%2FProperties%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
+                                <div>
+                                    <div class="title">
+                                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"
+                                             data-togglable="Properties">
+                                            <div class="content sourceset-dependent-content" data-active=""
+                                                 data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                                                <a anchor-label="dependencies"
+                                                   data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-name="-151881963%2FProperties%2F1406385035"
+                                                   id="-151881963%2FProperties%2F1406385035"></a>
+                                                <div class="symbol monospace"><span class="token keyword"></span><span
+                                                        class="token keyword">val </span><a href="dependencies.html">dependencies</a><span
+                                                        class="token operator">: </span><a
+                                                        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span
+                                                        class="token operator">&lt;</span><span
+                                                        class="token keyword"></span><a
+                                                        href="../../dev.nyon.headquarters.connector.modrinth.models.project/-dependency/index.html">Dependency</a><span
+                                                        class="token operator">&gt;</span><span
+                                                        class="token operator">?</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a anchor-label="downloads" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                           data-name="-182809487%2FProperties%2F1406385035"
+                           id="-182809487%2FProperties%2F1406385035"></a>
+                        <div class="table-row"
+                             data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                             data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                            <div class="main-subrow keyValue ">
+                                <div class=""><span class="inline-flex">
                 <div><a href="downloads.html"><span><span>downloads</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-182809487%2FProperties%2F1406385035"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  <div class="copy-popup-wrapper "><span
+                          class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main"><a data-name="-182809487%2FProperties%2F1406385035" anchor-label="downloads" id="-182809487%2FProperties%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="downloads.html">downloads</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="-1633261520%2FProperties%2F1406385035" anchor-label="featured" id="-1633261520%2FProperties%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
+                                <div>
+                                    <div class="title">
+                                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"
+                                             data-togglable="Properties">
+                                            <div class="content sourceset-dependent-content" data-active=""
+                                                 data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                                                <a anchor-label="downloads"
+                                                   data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-name="-182809487%2FProperties%2F1406385035"
+                                                   id="-182809487%2FProperties%2F1406385035"></a>
+                                                <div class="symbol monospace"><span class="token keyword"></span><span
+                                                        class="token keyword">val </span><a href="downloads.html">downloads</a><span
+                                                        class="token operator">: </span><a
+                                                        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a anchor-label="featured" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                           data-name="-1633261520%2FProperties%2F1406385035"
+                           id="-1633261520%2FProperties%2F1406385035"></a>
+                        <div class="table-row"
+                             data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                             data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                            <div class="main-subrow keyValue ">
+                                <div class=""><span class="inline-flex">
                 <div><a href="featured.html"><span><span>featured</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1633261520%2FProperties%2F1406385035"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  <div class="copy-popup-wrapper "><span
+                          class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main"><a data-name="-1633261520%2FProperties%2F1406385035" anchor-label="featured" id="-1633261520%2FProperties%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="featured.html">featured</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="1850615781%2FProperties%2F1406385035" anchor-label="files" id="1850615781%2FProperties%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
+                                <div>
+                                    <div class="title">
+                                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"
+                                             data-togglable="Properties">
+                                            <div class="content sourceset-dependent-content" data-active=""
+                                                 data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                                                <a anchor-label="featured"
+                                                   data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-name="-1633261520%2FProperties%2F1406385035"
+                                                   id="-1633261520%2FProperties%2F1406385035"></a>
+                                                <div class="symbol monospace"><span class="token keyword"></span><span
+                                                        class="token keyword">val </span><a href="featured.html">featured</a><span
+                                                        class="token operator">: </span><a
+                                                        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a anchor-label="files" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                           data-name="1850615781%2FProperties%2F1406385035"
+                           id="1850615781%2FProperties%2F1406385035"></a>
+                        <div class="table-row"
+                             data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                             data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                            <div class="main-subrow keyValue ">
+                                <div class=""><span class="inline-flex">
                 <div><a href="files.html"><span><span>files</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1850615781%2FProperties%2F1406385035"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  <div class="copy-popup-wrapper "><span
+                          class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main"><a data-name="1850615781%2FProperties%2F1406385035" anchor-label="files" id="1850615781%2FProperties%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="files.html">files</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-file/index.html">File</a><span class="token operator">&gt;</span></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="-1674963951%2FProperties%2F1406385035" anchor-label="gameVersions" id="-1674963951%2FProperties%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
+                                <div>
+                                    <div class="title">
+                                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"
+                                             data-togglable="Properties">
+                                            <div class="content sourceset-dependent-content" data-active=""
+                                                 data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                                                <a anchor-label="files" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                                                   data-name="1850615781%2FProperties%2F1406385035"
+                                                   id="1850615781%2FProperties%2F1406385035"></a>
+                                                <div class="symbol monospace"><span class="token keyword"></span><span
+                                                        class="token keyword">val </span><a
+                                                        href="files.html">files</a><span
+                                                        class="token operator">: </span><a
+                                                        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span
+                                                        class="token operator">&lt;</span><span
+                                                        class="token keyword"></span><a
+                                                        href="../-file/index.html">File</a><span class="token operator">&gt;</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a anchor-label="gameVersions" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                           data-name="-1674963951%2FProperties%2F1406385035"
+                           id="-1674963951%2FProperties%2F1406385035"></a>
+                        <div class="table-row"
+                             data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                             data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                            <div class="main-subrow keyValue ">
+                                <div class=""><span class="inline-flex">
                 <div><a href="game-versions.html"><span>game</span><wbr><span><span>Versions</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1674963951%2FProperties%2F1406385035"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  <div class="copy-popup-wrapper "><span
+                          class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main"><a data-name="-1674963951%2FProperties%2F1406385035" anchor-label="gameVersions" id="-1674963951%2FProperties%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="game-versions.html">gameVersions</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="-1615679325%2FProperties%2F1406385035" anchor-label="id" id="-1615679325%2FProperties%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
+                                <div>
+                                    <div class="title">
+                                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"
+                                             data-togglable="Properties">
+                                            <div class="content sourceset-dependent-content" data-active=""
+                                                 data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                                                <a anchor-label="gameVersions"
+                                                   data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                                                   data-name="-1674963951%2FProperties%2F1406385035"
+                                                   id="-1674963951%2FProperties%2F1406385035"></a>
+                                                <div class="symbol monospace"><span class="token keyword"></span><span
+                                                        class="token keyword">val </span><a href="game-versions.html">gameVersions</a><span
+                                                        class="token operator">: </span><a
+                                                        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span
+                                                        class="token operator">&lt;</span><span
+                                                        class="token keyword"></span><a
+                                                        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span
+                                                        class="token operator">&gt;</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a anchor-label="id" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                           data-name="-1615679325%2FProperties%2F1406385035"
+                           id="-1615679325%2FProperties%2F1406385035"></a>
+                        <div class="table-row"
+                             data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                             data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                            <div class="main-subrow keyValue ">
+                                <div class=""><span class="inline-flex">
                 <div><a href="id.html"><span><span>id</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1615679325%2FProperties%2F1406385035"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  <div class="copy-popup-wrapper "><span
+                          class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main"><a data-name="-1615679325%2FProperties%2F1406385035" anchor-label="id" id="-1615679325%2FProperties%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="id.html">id</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="-672919556%2FProperties%2F1406385035" anchor-label="loaders" id="-672919556%2FProperties%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
+                                <div>
+                                    <div class="title">
+                                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"
+                                             data-togglable="Properties">
+                                            <div class="content sourceset-dependent-content" data-active=""
+                                                 data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                                                <a anchor-label="id" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                                                   data-name="-1615679325%2FProperties%2F1406385035"
+                                                   id="-1615679325%2FProperties%2F1406385035"></a>
+                                                <div class="symbol monospace"><span class="token keyword"></span><span
+                                                        class="token keyword">val </span><a href="id.html">id</a><span
+                                                        class="token operator">: </span><a
+                                                        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a anchor-label="loaders" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                           data-name="-672919556%2FProperties%2F1406385035"
+                           id="-672919556%2FProperties%2F1406385035"></a>
+                        <div class="table-row"
+                             data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                             data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                            <div class="main-subrow keyValue ">
+                                <div class=""><span class="inline-flex">
                 <div><a href="loaders.html"><span><span>loaders</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-672919556%2FProperties%2F1406385035"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  <div class="copy-popup-wrapper "><span
+                          class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main"><a data-name="-672919556%2FProperties%2F1406385035" anchor-label="loaders" id="-672919556%2FProperties%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="loaders.html">loaders</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-loader/index.html">Loader</a><span class="token operator">&gt;</span></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="-1283367693%2FProperties%2F1406385035" anchor-label="name" id="-1283367693%2FProperties%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
+                                <div>
+                                    <div class="title">
+                                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"
+                                             data-togglable="Properties">
+                                            <div class="content sourceset-dependent-content" data-active=""
+                                                 data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                                                <a anchor-label="loaders"
+                                                   data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-name="-672919556%2FProperties%2F1406385035"
+                                                   id="-672919556%2FProperties%2F1406385035"></a>
+                                                <div class="symbol monospace"><span class="token keyword"></span><span
+                                                        class="token keyword">val </span><a
+                                                        href="loaders.html">loaders</a><span
+                                                        class="token operator">: </span><a
+                                                        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span
+                                                        class="token operator">&lt;</span><span
+                                                        class="token keyword"></span><a href="../-loader/index.html">Loader</a><span
+                                                        class="token operator">&gt;</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a anchor-label="name" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                           data-name="-1283367693%2FProperties%2F1406385035"
+                           id="-1283367693%2FProperties%2F1406385035"></a>
+                        <div class="table-row"
+                             data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                             data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                            <div class="main-subrow keyValue ">
+                                <div class=""><span class="inline-flex">
                 <div><a href="name.html"><span><span>name</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1283367693%2FProperties%2F1406385035"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  <div class="copy-popup-wrapper "><span
+                          class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main"><a data-name="-1283367693%2FProperties%2F1406385035" anchor-label="name" id="-1283367693%2FProperties%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="name.html">name</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="1066594184%2FProperties%2F1406385035" anchor-label="projectID" id="1066594184%2FProperties%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
+                                <div>
+                                    <div class="title">
+                                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"
+                                             data-togglable="Properties">
+                                            <div class="content sourceset-dependent-content" data-active=""
+                                                 data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                                                <a anchor-label="name" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                                                   data-name="-1283367693%2FProperties%2F1406385035"
+                                                   id="-1283367693%2FProperties%2F1406385035"></a>
+                                                <div class="symbol monospace"><span class="token keyword"></span><span
+                                                        class="token keyword">val </span><a
+                                                        href="name.html">name</a><span
+                                                        class="token operator">: </span><a
+                                                        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a anchor-label="projectID" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                           data-name="1066594184%2FProperties%2F1406385035"
+                           id="1066594184%2FProperties%2F1406385035"></a>
+                        <div class="table-row"
+                             data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                             data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                            <div class="main-subrow keyValue ">
+                                <div class=""><span class="inline-flex">
                 <div><a href="project-i-d.html"><span>project</span><wbr><span><span>ID</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1066594184%2FProperties%2F1406385035"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  <div class="copy-popup-wrapper "><span
+                          class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main"><a data-name="1066594184%2FProperties%2F1406385035" anchor-label="projectID" id="1066594184%2FProperties%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="project-i-d.html">projectID</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="-966439730%2FProperties%2F1406385035" anchor-label="published" id="-966439730%2FProperties%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
+                                <div>
+                                    <div class="title">
+                                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"
+                                             data-togglable="Properties">
+                                            <div class="content sourceset-dependent-content" data-active=""
+                                                 data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                                                <a anchor-label="projectID"
+                                                   data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-name="1066594184%2FProperties%2F1406385035"
+                                                   id="1066594184%2FProperties%2F1406385035"></a>
+                                                <div class="symbol monospace"><span class="token keyword"></span><span
+                                                        class="token keyword">val </span><a href="project-i-d.html">projectID</a><span
+                                                        class="token operator">: </span><a
+                                                        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a anchor-label="published" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                           data-name="-966439730%2FProperties%2F1406385035"
+                           id="-966439730%2FProperties%2F1406385035"></a>
+                        <div class="table-row"
+                             data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                             data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                            <div class="main-subrow keyValue ">
+                                <div class=""><span class="inline-flex">
                 <div><a href="published.html"><span><span>published</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-966439730%2FProperties%2F1406385035"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  <div class="copy-popup-wrapper "><span
+                          class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main"><a data-name="-966439730%2FProperties%2F1406385035" anchor-label="published" id="-966439730%2FProperties%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="published.html">published</a><span class="token operator">: </span><span data-unresolved-link="kotlinx.datetime/Instant///PointingToDeclaration/">Instant</span></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="-1027127205%2FProperties%2F1406385035" anchor-label="versionNumber" id="-1027127205%2FProperties%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
+                                <div>
+                                    <div class="title">
+                                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"
+                                             data-togglable="Properties">
+                                            <div class="content sourceset-dependent-content" data-active=""
+                                                 data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                                                <a anchor-label="published"
+                                                   data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-name="-966439730%2FProperties%2F1406385035"
+                                                   id="-966439730%2FProperties%2F1406385035"></a>
+                                                <div class="symbol monospace"><span class="token keyword"></span><span
+                                                        class="token keyword">val </span><a href="published.html">published</a><span
+                                                        class="token operator">: </span><span
+                                                        data-unresolved-link="kotlinx.datetime/Instant///PointingToDeclaration/">Instant</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a anchor-label="versionNumber" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                           data-name="-1027127205%2FProperties%2F1406385035"
+                           id="-1027127205%2FProperties%2F1406385035"></a>
+                        <div class="table-row"
+                             data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                             data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                            <div class="main-subrow keyValue ">
+                                <div class=""><span class="inline-flex">
                 <div><a href="version-number.html"><span>version</span><wbr><span><span>Number</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1027127205%2FProperties%2F1406385035"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  <div class="copy-popup-wrapper "><span
+                          class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main"><a data-name="-1027127205%2FProperties%2F1406385035" anchor-label="versionNumber" id="-1027127205%2FProperties%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="version-number.html">versionNumber</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="-370771126%2FProperties%2F1406385035" anchor-label="versionType" id="-370771126%2FProperties%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
+                                <div>
+                                    <div class="title">
+                                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"
+                                             data-togglable="Properties">
+                                            <div class="content sourceset-dependent-content" data-active=""
+                                                 data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                                                <a anchor-label="versionNumber"
+                                                   data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                                                   data-name="-1027127205%2FProperties%2F1406385035"
+                                                   id="-1027127205%2FProperties%2F1406385035"></a>
+                                                <div class="symbol monospace"><span class="token keyword"></span><span
+                                                        class="token keyword">val </span><a href="version-number.html">versionNumber</a><span
+                                                        class="token operator">: </span><a
+                                                        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a anchor-label="versionType" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                           data-name="-370771126%2FProperties%2F1406385035"
+                           id="-370771126%2FProperties%2F1406385035"></a>
+                        <div class="table-row"
+                             data-filterable-current=":headquarters-connector-modrinth:dokkaHtmlPartial/main"
+                             data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                            <div class="main-subrow keyValue ">
+                                <div class=""><span class="inline-flex">
                 <div><a href="version-type.html"><span>version</span><wbr><span><span>Type</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-370771126%2FProperties%2F1406385035"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  <div class="copy-popup-wrapper "><span
+                          class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main"><a data-name="-370771126%2FProperties%2F1406385035" anchor-label="versionType" id="-370771126%2FProperties%2F1406385035" data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="version-type.html">versionType</a><span class="token operator">: </span><a href="../-version-type/index.html">VersionType</a></div></div></div>
-              </div>
+                                <div>
+                                    <div class="title">
+                                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"
+                                             data-togglable="Properties">
+                                            <div class="content sourceset-dependent-content" data-active=""
+                                                 data-togglable=":headquarters-connector-modrinth:dokkaHtmlPartial/main">
+                                                <a anchor-label="versionType"
+                                                   data-filterable-set=":headquarters-connector-modrinth:dokkaHtmlPartial/main" data-name="-370771126%2FProperties%2F1406385035"
+                                                   id="-370771126%2FProperties%2F1406385035"></a>
+                                                <div class="symbol monospace"><span class="token keyword"></span><span
+                                                        class="token keyword">val </span><a href="version-type.html">versionType</a><span
+                                                        class="token operator">: </span><a
+                                                        href="../-version-type/index.html">VersionType</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-      <div class="footer">
-        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
-      </div>
+        <div class="footer">
+            <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+        </div>
     </div>
 </div>
 
-</body></html>
+</body>
+</html>
 

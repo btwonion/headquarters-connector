@@ -44,7 +44,7 @@
     --inactive-tab-border-color: rgba(164, 164, 170, 0.7);
 
     --active-section-color: #7F52FF;
-    --inactive-section-color: rgba(25,25,28,.7);
+    --inactive-section-color: rgba(25, 25, 28, .7);
 
     --sidemenu-section-active-color: #7F52FF;
 }
@@ -752,7 +752,7 @@ small {
 
 .deprecation-content {
     margin: 20px 10px;
-    border:1px solid var(--border-color);
+    border: 1px solid var(--border-color);
     padding: 13px 15px 16px 15px;
 }
 
@@ -1281,6 +1281,7 @@ div.runnablesample {
         display: none;
     }
 }
+
 .clearfix::after {
     content: ' ';
     clear: both;

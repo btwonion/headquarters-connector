@@ -309,7 +309,7 @@ function refreshFiltering() {
 
 function refreshNoContentNotification() {
     const element = document.getElementsByClassName("main-content")[0]
-    if(filteringContext.activeFilters.length === 0){
+    if (filteringContext.activeFilters.length === 0) {
         element.style.display = "none";
 
         const appended = document.createElement("div")
@@ -318,7 +318,7 @@ function refreshNoContentNotification() {
         sourcesetNotification = appended
         element.parentNode.prepend(appended)
     } else {
-        if(sourcesetNotification) sourcesetNotification.remove()
+        if (sourcesetNotification) sourcesetNotification.remove()
         element.style.display = "block"
     }
 }

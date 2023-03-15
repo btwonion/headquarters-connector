@@ -17,6 +17,5 @@ class FabricConnector(
     override val baseUrl: String = "https://meta.fabricmc.net/v2"
 ) : AbstractConnector() {
 
-        
 
 }
