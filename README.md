@@ -6,9 +6,9 @@
 
 ### Setup
 
-Documentation: [Click](https://btwonion.github.io/headquarters-connector)
-</br>
 <img src="https://repo.nyon.dev/api/badge/latest/releases/dev/nyon/headquarters-connector-core?color=AD10A7&name=headquarters-connector&prefix=v" />
+
+[Documentation](https://btwonion.github.io/headquarters-connector)
 
 ```kotlin
 repositories {
