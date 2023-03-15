@@ -18,7 +18,7 @@ githubRelease {
     tagName("v${rootProject.version}")
     prerelease(BuildConstants.isSnapshot)
     releaseAssets(tasks["build"].outputs.files)
-    body("add javadocs")
+    body("- add jvm argument path")
 }
 
 java {
@@ -38,49 +38,20 @@ tasks {
 publishing {
     repositories {
         maven {
-            name = "ossrh"
+            name = "nyon"
+            url = uri("https://repo.nyon.dev/releases")
             credentials(PasswordCredentials::class)
-            setUrl(
-                if (!BuildConstants.isSnapshot) "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2"
-                else "https://s01.oss.sonatype.org/content/repositories/snapshots"
-            )
+            authentication {
+                create<BasicAuthentication>("basic")
+            }
         }
     }
-
     publications {
-        register<MavenPublication>(project.name) {
+        create<MavenPublication>("maven") {
+            groupId = "dev.nyon"
+            artifactId = project.name
+            version = rootProject.version.toString()
             from(components["java"])
-
-            this.groupId = project.group.toString()
-            this.artifactId = project.name
-            this.version = rootProject.version.toString()
-
-            pom {
-                name.set(project.name)
-                description.set(project.description)
-
-                developers {
-                    BuildConstants.authors.forEach {
-                        developer {
-                            name.set(it)
-                        }
-                    }
-                }
-
-                licenses {
-                    license {
-                        name.set("GNU General Public License 3")
-                        url.set("https://www.gnu.org/licenses/gpl-3.0.txt")
-                    }
-                }
-
-                url.set("https://github.com/${BuildConstants.githubRepo}")
-
-                scm {
-                    connection.set("scm:git:git://github.com/${BuildConstants.githubRepo}.git")
-                    url.set("https://github.com/${BuildConstants.githubRepo}/tree/main")
-                }
-            }
         }
     }
 }

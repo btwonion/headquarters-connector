@@ -4,6 +4,6 @@ plugins {
 
 allprojects {
     group = "dev.nyon"
-    description = "API for requesting stuff from modrinth http api"
-    version = "1.4.1"
+    description = "API for making requests to minecraft related http apis"
+    version = "1.4.2"
 }
