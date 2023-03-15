@@ -43,6 +43,6 @@ data class LaunchWrapper(val tweakers: Tweakers)
 data class Tweakers(val client: List<String>, val common: List<String>, val server: List<String>)
 
 object LauncherMetaSerializer : JsonContentPolymorphicSerializer<ILauncherMeta>(ILauncherMeta::class) {
-    override fun selectDeserializer(element: JsonElement): DeserializationStrategy<out ILauncherMeta> =
+    override fun selectDeserializer(element: JsonElement): DeserializationStrategy<ILauncherMeta> =
         if (element.jsonObject.keys.size == 5) OldLauncherMeta.serializer() else LauncherMeta.serializer()
 }
