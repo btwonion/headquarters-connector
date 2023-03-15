@@ -14,7 +14,7 @@ import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
 
 @Serializable
-data class PackageArguments(val game: List<Argument>)
+data class PackageArguments(val game: List<Argument>, val jvm: List<Argument>)
 
 @Serializable(with = ArgumentSerializer::class)
 sealed interface Argument {
@@ -30,14 +30,14 @@ sealed interface Argument {
 }
 
 object ArgumentSerializer : JsonContentPolymorphicSerializer<Argument>(Argument::class) {
-    override fun selectDeserializer(element: JsonElement): DeserializationStrategy<out Argument> = when (element) {
+    override fun selectDeserializer(element: JsonElement): DeserializationStrategy<Argument> = when (element) {
         is JsonPrimitive -> Argument.SimpleArgument.serializer()
         else -> Argument.ExtendedArgument.serializer()
     }
 }
 
 object ArgumentValueSerializer : JsonContentPolymorphicSerializer<List<*>>(List::class) {
-    override fun selectDeserializer(element: JsonElement): DeserializationStrategy<out List<String>> = when (element) {
+    override fun selectDeserializer(element: JsonElement): DeserializationStrategy<List<String>> = when (element) {
         is JsonPrimitive -> StringAsListSerializer
         else -> ListSerializer(String.serializer())
     }

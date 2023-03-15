@@ -47,10 +47,13 @@ data class MinecraftVersion(
 enum class MinecraftVersionType {
     @SerialName("release")
     Release,
+
     @SerialName("snapshot")
     Snapshot,
+
     @SerialName("old_alpha")
     OldAlpha,
+
     @SerialName("old_beta")
     OldBeta
 }
