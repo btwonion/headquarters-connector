@@ -6,10 +6,22 @@
 
 ### Setup
 
-[Docs](https://btwonion.github.io/headquarters-connector)
+<img src="https://repo.nyon.dev/api/badge/latest/releases/dev/nyon/headquarters-connector-core?color=AD10A7&name=headquarters-connector&prefix=v" />
+
+[Documentation](https://btwonion.github.io/headquarters-connector)
+
+```kotlin
+repositories {
+  maven("https://repo.nyon.dev/releases")
+}
+
+dependencies {
+  implementation("dev.nyon:headquarters-connector-core:1.4.2")
+  // now the library you want to use
+  // eg.
+  implementation("dev.nyon:headquarters-connector-modrinth:1.4.2")
+}
+```
 
 ### Other
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I3I8F1WX4)
-
 If you need help with any of my projects just join my [discord server](https://nyon.dev/discord)
