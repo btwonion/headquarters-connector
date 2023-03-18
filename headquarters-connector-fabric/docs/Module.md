@@ -6,7 +6,7 @@ ${dependencyNotice}
 
 # Package dev.nyon.headquarters.connector.fabric
 
-Contains the `FabricConnector`
+Contains the `dev.nyon.headquarters.connector.fabric.FabricConnector`
 
 # Package dev.nyon.headquarters.connector.fabric.models
 

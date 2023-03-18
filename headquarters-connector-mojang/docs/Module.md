@@ -6,7 +6,7 @@ ${dependencyNotice}
 
 # Package dev.nyon.headquarters.connector.mojang
 
-Contains the `MojangConnector`
+Contains the `dev.nyon.headquarters.connector.mojang.MojangConnector`
 
 # Package dev.nyon.headquarters.connector.mojang.models
 
