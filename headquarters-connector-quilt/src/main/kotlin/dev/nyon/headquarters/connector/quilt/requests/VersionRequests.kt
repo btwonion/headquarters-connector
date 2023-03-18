@@ -2,7 +2,6 @@ package dev.nyon.headquarters.connector.quilt.requests
 
 import dev.nyon.headquarters.connector.quilt.QuiltConnector
 import dev.nyon.headquarters.connector.quilt.models.*
-import dev.nyon.quilt.headquarters.connector.quilt.models.*
 
 suspend fun QuiltConnector.getVersions() = request<Versions>("/versions")
 

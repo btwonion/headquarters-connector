@@ -23,6 +23,6 @@ dev.nyon.headquarters.connector.mojang
 dev.nyon.headquarters.connector.mojang.models
 dev.nyon.headquarters.connector.mojang.models.package
 module:headquarters-connector-quilt
-headquarters.connector.quilt
-headquarters.connector.quilt.models
-headquarters.connector.quilt.requests
+dev.nyon.headquarters.connector.quilt
+dev.nyon.headquarters.connector.quilt.models
+dev.nyon.headquarters.connector.quilt.requests
