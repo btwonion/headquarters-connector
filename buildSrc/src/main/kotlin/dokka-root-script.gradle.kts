@@ -14,6 +14,8 @@ tasks {
     withType<DokkaMultiModuleTask> {
         includes.from("dokka/includes/main.md")
 
+        moduleName.set("headquarters-connector")
+
         pluginConfiguration<DokkaBase, DokkaBaseConfiguration> {
             customStyleSheets = listOf(*(rootDir.resolve("dokka/stylesheets").listFiles() ?: emptyArray()))
         }

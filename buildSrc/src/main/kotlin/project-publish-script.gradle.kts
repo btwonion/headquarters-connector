@@ -18,7 +18,7 @@ githubRelease {
     tagName("v${rootProject.version}")
     prerelease(BuildConstants.isSnapshot)
     releaseAssets(tasks["build"].outputs.files)
-    body("- add jvm argument path</br>- add missing modrinth routes")
+    body("- add quilt connector")
 }
 
 java {
