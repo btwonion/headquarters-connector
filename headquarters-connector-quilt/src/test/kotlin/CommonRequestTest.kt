@@ -1,6 +1,6 @@
 package dev.nyon.headquarters.connector.fabric.test
 
-import headquarters.connector.quilt.QuiltConnector
+import dev.nyon.headquarters.connector.quilt.QuiltConnector
 import io.kotest.core.spec.style.FunSpec
 import io.ktor.client.*
 import io.ktor.client.engine.cio.*

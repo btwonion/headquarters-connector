@@ -1,4 +1,4 @@
-package headquarters.connector.quilt
+package dev.nyon.headquarters.connector.quilt
 
 import dev.nyon.headquarters.connector.api.AbstractConnector
 import io.ktor.client.*
@@ -8,4 +8,4 @@ class QuiltConnector(
     override val client: HttpClient,
     override val json: Json,
     override val baseUrl: String = "https://meta.quiltmc.org/v3"
-) : AbstractConnector() {}
+) : AbstractConnector()

@@ -1,4 +1,4 @@
-package headquarters.connector.quilt.models
+package dev.nyon.headquarters.connector.quilt.models
 
 import kotlinx.serialization.Serializable
 

@@ -1,6 +1,7 @@
 package dev.nyon.headquarters.connector.fabric.test
 
-import headquarters.connector.quilt.requests.*
+import dev.nyon.headquarters.connector.quilt.requests.*
+import dev.nyon.quilt.headquarters.connector.quilt.requests.*
 import io.kotest.matchers.nulls.shouldNotBeNull
 
 class VersionTest : CommonRequestTest({
