@@ -15,7 +15,4 @@ class FabricConnector(
     override val client: HttpClient,
     override val json: Json,
     override val baseUrl: String = "https://meta.fabricmc.net/v2"
-) : AbstractConnector() {
-
-
-}
+) : AbstractConnector()
