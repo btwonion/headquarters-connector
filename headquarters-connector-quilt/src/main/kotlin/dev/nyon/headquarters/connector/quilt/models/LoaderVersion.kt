@@ -11,8 +11,8 @@ data class LoaderProfile(
     val mainClass: String,
     val arguments: Arguments,
     val libraries: List<Artifact>,
-    val releaseTime: Instant,
-    val time: Instant
+    val releaseTime: String,
+    val time: String
 )
 
 @Serializable
