@@ -18,7 +18,7 @@ githubRelease {
     tagName("v${rootProject.version}")
     prerelease(BuildConstants.isSnapshot)
     releaseAssets(tasks["build"].outputs.files)
-    body("- add quilt connector")
+    body("- fix facets for modrinth search")
 }
 
 java {

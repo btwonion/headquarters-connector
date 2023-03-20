@@ -9,43 +9,42 @@ import dev.nyon.headquarters.connector.modrinth.models.project.ProjectType as Re
  * @param keyWord The keyword of the facet
  * @param value The value of the facet
  */
-sealed class Facet<T>(open val keyWord: String, open val value: T) {
+sealed class Facet<T>(open val keyWord: String, open val value: List<T>) {
     /**
      * The abstract fun to serialize the facet into a json object
      */
     abstract fun toJsonObject(): String
 
+    fun defaultJsonTransformation(): String =
+        value.joinToString(separator = "\"],[\"$keyWord:", prefix = "[\"$keyWord:", postfix = "\"]")
+
     /**
      * The category facet
      */
-    data class Categories(override val value: List<String>) : Facet<List<String>>("categories", value) {
-        override fun toJsonObject(): String =
-            this.value.joinToString(separator = "\",\"$keyWord:", prefix = "[\"$keyWord:", postfix = "\"]")
+    data class Categories(override val value: List<String>) : Facet<String>("categories", value) {
+        override fun toJsonObject(): String = defaultJsonTransformation()
     }
 
     /**
      * The version facet
      */
-    data class Version(override val value: List<String>) : Facet<List<String>>("versions", value) {
-        override fun toJsonObject(): String =
-            this.value.joinToString(separator = "\",\"$keyWord:", prefix = "[\"$keyWord:", postfix = "\"]")
+    data class Version(override val value: List<String>) : Facet<String>("versions", value) {
+        override fun toJsonObject(): String = defaultJsonTransformation()
     }
 
     /**
      * The license facet
      */
-    data class License(override val value: List<String>) : Facet<List<String>>("license", value) {
-        override fun toJsonObject(): String =
-            this.value.joinToString(separator = "\",\"$keyWord:", prefix = "[\"$keyWord:", postfix = "\"]")
+    data class License(override val value: List<String>) : Facet<String>("license", value) {
+        override fun toJsonObject(): String = defaultJsonTransformation()
     }
 
     /**
      * The ProjectType facet
      */
-    data class ProjectType(override val value: List<RealProjectType>) :
-        Facet<List<RealProjectType>>("project_type", value) {
+    data class ProjectType(override val value: List<RealProjectType>) : Facet<RealProjectType>("project_type", value) {
         override fun toJsonObject(): String =
-            this.value.joinToString(separator = "\",\"$keyWord:", prefix = "[\"$keyWord:", postfix = "\"]") {
+            this.value.joinToString(separator = "\"],[\"$keyWord:", prefix = "[\"$keyWord:", postfix = "\"]") {
                 it.getEnumFieldAnnotation<SerialName>()!!.value
             }
     }
@@ -54,5 +53,4 @@ sealed class Facet<T>(open val keyWord: String, open val value: T) {
 inline fun <reified A : Annotation> Enum<*>.getEnumFieldAnnotation(): A? =
     javaClass.getDeclaredField(name).getAnnotation(A::class.java)
 
-fun List<Facet<*>>.merge(): String =
-    joinToString(separator = ",", prefix = "[", postfix = "]") { it.toJsonObject() }
+fun List<Facet<*>>.merge(): String = joinToString(separator = ",", prefix = "[", postfix = "]") { it.toJsonObject() }
