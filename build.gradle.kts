@@ -6,7 +6,7 @@ plugins {
 allprojects {
     group = "dev.nyon"
     description = "API for making requests to minecraft related http apis"
-    version = "1.4.4"
+    version = "1.4.5"
 }
 
 tasks {
@@ -33,5 +33,5 @@ githubRelease {
     targetCommitish("master")
     tagName("v${rootProject.version}")
     prerelease(BuildConstants.isSnapshot)
-    body("- fix facets for modrinth search")
+    body("- add 'and' and 'or' facet operator to modrinth module")
 }

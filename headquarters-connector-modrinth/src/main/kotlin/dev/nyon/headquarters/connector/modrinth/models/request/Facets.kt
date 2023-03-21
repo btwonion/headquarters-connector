@@ -9,19 +9,26 @@ import dev.nyon.headquarters.connector.modrinth.models.project.ProjectType as Re
  * @param keyWord The keyword of the facet
  * @param value The value of the facet
  */
-sealed class Facet<T>(open val keyWord: String, open val value: List<T>) {
+sealed class Facet<T>(
+    open val keyWord: String, open val value: List<T>, open val operator: FacetKeyword = FacetKeyword.Or
+) {
     /**
      * The abstract fun to serialize the facet into a json object
      */
     abstract fun toJsonObject(): String
 
-    fun defaultJsonTransformation(): String =
-        value.joinToString(separator = "\"],[\"$keyWord:", prefix = "[\"$keyWord:", postfix = "\"]")
+    fun defaultJsonTransformation(): String = if (operator == FacetKeyword.And) value.joinToString(
+        separator = "\"],[\"$keyWord:", prefix = "[\"$keyWord:", postfix = "\"]"
+    ) else value.joinToString(
+        separator = "\",\"$keyWord:", prefix = "[\"$keyWord:", postfix = "\"]"
+    )
 
     /**
      * The category facet
      */
-    data class Categories(override val value: List<String>) : Facet<String>("categories", value) {
+    data
+
+    class Categories(override val value: List<String>) : Facet<String>("categories", value) {
         override fun toJsonObject(): String = defaultJsonTransformation()
     }
 
@@ -43,12 +50,19 @@ sealed class Facet<T>(open val keyWord: String, open val value: List<T>) {
      * The ProjectType facet
      */
     data class ProjectType(override val value: List<RealProjectType>) : Facet<RealProjectType>("project_type", value) {
-        override fun toJsonObject(): String =
-            this.value.joinToString(separator = "\"],[\"$keyWord:", prefix = "[\"$keyWord:", postfix = "\"]") {
-                it.getEnumFieldAnnotation<SerialName>()!!.value
-            }
+        override fun toJsonObject(): String = if (operator == FacetKeyword.And) value.joinToString(
+            separator = "\"],[\"$keyWord:", prefix = "[\"$keyWord:", postfix = "\"]"
+        ) {
+            it.getEnumFieldAnnotation<SerialName>()!!.value
+        } else value.joinToString(
+            separator = "\",\"$keyWord:", prefix = "[\"$keyWord:", postfix = "\"]"
+        ) {
+            it.getEnumFieldAnnotation<SerialName>()!!.value
+        }
     }
 }
+
+enum class FacetKeyword { And, Or }
 
 inline fun <reified A : Annotation> Enum<*>.getEnumFieldAnnotation(): A? =
     javaClass.getDeclaredField(name).getAnnotation(A::class.java)
